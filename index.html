@@ -83,8 +83,8 @@ function cat_list(x)
      document.getElementById("sub_lst6").style.visibility="true";	   
     }
 }
-	$("select").multiselect({
-   selectedText: "# of # selected"
+	$(function(){
+   $("select").multiselect(); 
 });
 </script>
 	<style type="text/css">
@@ -211,7 +211,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 </head>
 
 <body style="background-color: transparent;" onload='init();'> 
-	<center>cookEZ</center>
+	<p style = "background-color: #DAD4D3" align='center'><b>cookEZ</b></p>
 	<div id='main_scr' class='main_scr'>
 <table border="1" cellpadding="0" height='100%' cellspacing="0" width="100%">
 	
@@ -223,7 +223,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple>
+		<select title="Basic example" multiple="multiple" name="dairy" size="8">
 			<option>Milk</option>
 			<option>Cheese</option>
 			<option>Yogurt</option>
