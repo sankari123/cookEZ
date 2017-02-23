@@ -51,7 +51,8 @@ function cat_list(x)
 {
    document.getElementById("main_scr").style.display = "none";
    document.getElementById("main_scr").style.visibility="false";	   
-   if(x=='dairy')
+   
+	if(x=='dairy')
    {
      document.getElementById("sub_lst1").style.display = "block";
      document.getElementById("sub_lst1").style.visibility="true";	   
@@ -82,6 +83,9 @@ function cat_list(x)
      document.getElementById("sub_lst6").style.visibility="true";	   
     }
 }
+	$("select").multiselect({
+   selectedText: "# of # selected"
+});
 </script>
 	<style type="text/css">
 		body, html {
@@ -219,7 +223,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select id='dairy' multiple>
+		<select multiple>
 			<option>Milk</option>
 			<option>Cheese</option>
 			<option>Yogurt</option>
@@ -230,7 +234,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst2' class='sub_lst2' align='center'>
 		<center>Vegetables </center>
-		<select id='veg' multiple>
+		<select multiple>
 			<option>Bell Pepper (Capsicum)</option>
 			<option>Potato</option>
 			<option>Onion</option>
