@@ -82,10 +82,9 @@ function cat_list(x)
      document.getElementById("sub_lst6").style.display = "block";
      document.getElementById("sub_lst6").style.visibility="true";	   
     }
+	  $("select").multiselect(); 
 }
-	$(function(){
-   $("select").multiselect(); 
-});
+	
 </script>
 	<style type="text/css">
 		body, html {
@@ -157,7 +156,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
     max-width: 400px;
     width: 100% !important;
   }
-	#sub_lst1
+	.sub_lst1
 	{
 		
 		display:none;
@@ -166,7 +165,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	}
 		
-		#sub_lst2
+		.sub_lst2
 	{
 		
 		display:none;
@@ -223,7 +222,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select title="Basic example" multiple="multiple" name="dairy" size="8">
+		<select multiple="multiple" name="dairy" size="8">
 			<option>Milk</option>
 			<option>Cheese</option>
 			<option>Yogurt</option>
