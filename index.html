@@ -98,27 +98,91 @@ function cat_list(x)
 	else if(x=='meat')
    {
      document.getElementById("sub_lst3").style.display = "block";
-     document.getElementById("sub_lst3").style.visibility="true";	   
+     document.getElementById("sub_lst3").style.visibility="true";
+
+     document.getElementById("sub_lst1").style.display = "none";
+     document.getElementById("sub_lst1").style.visibility="false";	
+	  
+     document.getElementById("sub_lst2").style.display = "none";
+     document.getElementById("sub_lst2").style.visibility="false";
+	   
+     document.getElementById("sub_lst4").style.display = "none";
+     document.getElementById("sub_lst4").style.visibility="false";
+	   
+     document.getElementById("sub_lst5").style.display = "none";
+     document.getElementById("sub_lst5").style.visibility="false";	
+	  
+     document.getElementById("sub_lst6").style.display = "none";
+     document.getElementById("sub_lst6").style.visibility="false";	
     }
 	else if(x=='bread')
    {
      document.getElementById("sub_lst4").style.display = "block";
-     document.getElementById("sub_lst4").style.visibility="true";	   
+     document.getElementById("sub_lst4").style.visibility="true";
+	   
+     document.getElementById("sub_lst1").style.display = "none";
+     document.getElementById("sub_lst1").style.visibility="false";	
+	  
+     document.getElementById("sub_lst3").style.display = "none";
+     document.getElementById("sub_lst3").style.visibility="false";
+	   
+     document.getElementById("sub_lst2").style.display = "none";
+     document.getElementById("sub_lst2").style.visibility="false";
+	   
+     document.getElementById("sub_lst5").style.display = "none";
+     document.getElementById("sub_lst5").style.visibility="false";	
+	  
+     document.getElementById("sub_lst6").style.display = "none";
+     document.getElementById("sub_lst6").style.visibility="false";		   
+	   
     }
 	else if(x=='season')
    {
      document.getElementById("sub_lst5").style.display = "block";
-     document.getElementById("sub_lst5").style.visibility="true";	   
+     document.getElementById("sub_lst5").style.visibility="true";
+     
+     document.getElementById("sub_lst1").style.display = "none";
+     document.getElementById("sub_lst1").style.visibility="false";	
+	  
+     document.getElementById("sub_lst3").style.display = "none";
+     document.getElementById("sub_lst3").style.visibility="false";
+	   
+     document.getElementById("sub_lst4").style.display = "none";
+     document.getElementById("sub_lst4").style.visibility="false";
+	   
+     document.getElementById("sub_lst2").style.display = "none";
+     document.getElementById("sub_lst2").style.visibility="false";	
+	  
+     document.getElementById("sub_lst6").style.display = "none";
+     document.getElementById("sub_lst6").style.visibility="false";		   
     }
 	else if(x=='sauce')
    {
      document.getElementById("sub_lst6").style.display = "block";
-     document.getElementById("sub_lst6").style.visibility="true";	   
+     document.getElementById("sub_lst6").style.visibility="true";	
+	   
+     document.getElementById("sub_lst1").style.display = "none";
+     document.getElementById("sub_lst1").style.visibility="false";	
+	  
+     document.getElementById("sub_lst3").style.display = "none";
+     document.getElementById("sub_lst3").style.visibility="false";
+	   
+     document.getElementById("sub_lst4").style.display = "none";
+     document.getElementById("sub_lst4").style.visibility="false";
+	   
+     document.getElementById("sub_lst5").style.display = "none";
+     document.getElementById("sub_lst5").style.visibility="false";	
+	  
+     document.getElementById("sub_lst2").style.display = "none";
+     document.getElementById("sub_lst2").style.visibility="false";		   
     }
-	  $("select").multiselect(); 
+  $(function(){
+	$("select").multiselect();
+});
 }
 	
 </script>
+	
 	<style type="text/css">
 		body, html {
     width: 100%;
@@ -266,7 +330,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst2' class='sub_lst2' align='center'>
 		<center>Vegetables </center>
-		<select multiple>
+		<select multiple name='veg' size='10'>
 			<option>Bell Pepper (Capsicum)</option>
 			<option>Potato</option>
 			<option>Onion</option>
@@ -282,7 +346,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	
 	<div id='sub_lst3' class='sub_lst3' align='center'>
-		<select id='meat'>
+		<select multiple name='meat' size='10'>
 			<option>Mutton</option>
 			<option>Beef</option>
 			<option>Ham</option>
@@ -294,7 +358,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	</div>
 	<div id='sub_lst4' class='sub_lst4' align='center'>
-		<select id='bread'>
+		<select multiple name='bread' size='10' >
 			<option>Baguette</option>
 			<option>Bagel</option>
 			<option>Tortilla</option>
@@ -309,7 +373,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	
 	<div id='sub_lst5' class='sub_lst5' align='center'>
-		<select id='season'>
+		<select multiple name='season' size='10'>
 			<option>Anise</option>
 			<option>Basil</option>
 			<option>Black Pepper</option>
@@ -326,7 +390,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	</div>
 	<div id='sub_lst5' class='sub_lst6' align='center'>
-		<select id='sauce'>
+		<select multiple name='sauce' size='10'>
 			<option>Pasta Sauce</option>
 			<option>Chilly Sauce</option>
 			<option>Green Sauce</option>
