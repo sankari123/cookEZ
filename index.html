@@ -44,7 +44,41 @@ else{
    else if (navigator.device) {
      navigator.device.exitApp(); } }	}
 	   
-
+function cat_list(x)
+{
+   document.getElementById("main_scr").style.display = "none";
+   document.getElementById("main_scr").style.visibility="false";	   
+   if(x=='dairy')
+   {
+     document.getElementById("sub_lst1").style.display = "block";
+     document.getElementById("sub_lst1").style.visibility="true";	   
+    }
+	else if(x=='veg')
+   {
+     document.getElementById("sub_lst2").style.display = "block";
+     document.getElementById("sub_lst2").style.visibility="true";	   
+    }
+	else if(x=='meat')
+   {
+     document.getElementById("sub_lst3").style.display = "block";
+     document.getElementById("sub_lst3").style.visibility="true";	   
+    }
+	else if(x=='bread')
+   {
+     document.getElementById("sub_lst4").style.display = "block";
+     document.getElementById("sub_lst4").style.visibility="true";	   
+    }
+	else if(x=='season')
+   {
+     document.getElementById("sub_lst5").style.display = "block";
+     document.getElementById("sub_lst5").style.visibility="true";	   
+    }
+	else if(x=='sauce')
+   {
+     document.getElementById("sub_lst6").style.display = "block";
+     document.getElementById("sub_lst6").style.visibility="true";	   
+    }
+}
 </script>
 	<style type="text/css">
 		body, html {
@@ -93,7 +127,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
     max-width: 400px;
     width: 100% !important;
   }
-		
+		 
 
 	#evt_lst
 	{
@@ -116,19 +150,156 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
     max-width: 400px;
     width: 100% !important;
   }
+	.sub_lst1
+	{
 		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
+		.sub_lst1
+	{
+		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
+		.sub_lst2
+	{
+		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
+		.sub_lst3
+	{
+		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
+		.sub_lst4
+	{
+		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
+		.sub_lst5
+	{
+		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
+		.sub_lst6
+	{
+		
+		display:none;
+		text-align:center;
+		width: 100vw;
+		
+	}
 	</style>
 	
 </head>
 
 <body style="background-color: transparent;" onload='init();'> 
+	<div id='main_scr' class='main_scr'>
 <table border="1" cellpadding="0" height='100%' cellspacing="0" width="100%">
 	<tr height='5%'><td colspan=2 align='center'><font face=arial><b>cookEZ</b></font></td></tr>
 	<tr height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='dairy'><img src='dairy.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='veg'><img src='veg.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='meat'><img src='meat.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='bread'><img src='bread.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='season'><img src='seasoning.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='sauce'><img src='sauce.jpg' width='50%'></button></td></tr>
-	<tr height='5%'><td colspan=2 align='center'><font face=arial><b>Continue</b></font></td></tr>
+	<tr height='5%' bordercolor='ffffff'><td colspan=2 align='center'><font face=arial><b>Continue</b></font></td></tr>
 	</table>
+	</div>
+	<div id='sub_lst1' class='sub_lst1' align='center'>
+		<select id='dairy'>
+			<option>Milk</option>
+			<option>Cheese</option>
+			<option>Yogurt</option>
+			<option>Paneer</option>
+			<option>Butter</option>
+		</select>
+		
+	</div>
+	<div id='sub_lst2' class='sub_lst2' align='center'>
+		<select id='vegetables'>
+			<option>Bell Pepper (Capsicum)</option>
+			<option>Potato</option>
+			<option>Onion</option>
+			<option>Tomato</option>
+			<option>Cabbage</option>
+			<option>Carrots</option>
+			<option>Lettuce</option>
+			<option>Spinach</option>
+			<option>Celery</option>
+			<option>Asparagus</option>
+		</select>
+		
+	</div>
+	
+	<div id='sub_lst3' class='sub_lst3' align='center'>
+		<select id='meat'>
+			<option>Mutton</option>
+			<option>Beef</option>
+			<option>Ham</option>
+			<option>Chicken<option>
+			<option>Egg</option>
+			<option>Fish</option>
+			<option>Steak</option>
+		</select>
+		
+	</div>
+	<div id='sub_lst4' class='sub_lst4' align='center'>
+		<select id='bread'>
+			<option>Baguette</option>
+			<option>Bagel</option>
+			<option>Tortilla</option>
+			<option>Rye Bread<option>
+			<option>Naan</option>
+			<option>Croissant</option>
+			<option>Flat Bread</option>
+			<option>French Bread</option>
+			
+		</select>
+		
+	</div>
+	
+	<div id='sub_lst5' class='sub_lst5' align='center'>
+		<select id='season'>
+			<option>Anise</option>
+			<option>Basil</option>
+			<option>Black Pepper</option>
+			<option>Peppercorn<option>
+			<option>Caraway Seed</option>
+			<option>Celery Flakes</option>
+			<option>Celery Seed</option>
+			<option>Chilli Powder</option>
+			<option>Cilantro Leaves</option>
+			<option>Cinnamon</option>
+			<option>Cloves</option>
+			<option>Cumin</option>
+		</select>
+		
+	</div>
+	<div id='sub_lst5' class='sub_lst6' align='center'>
+		<select id='sauce'>
+			<option>Pasta Sauce</option>
+			<option>Chilly Sauce</option>
+			<option>Green Sauce</option>
+			<option>Butter Sauce<option>
+			<option>White Sauce</option>
+		</select>
+		
+	</div>
 	
 </body>
 </html>
