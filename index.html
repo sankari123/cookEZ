@@ -123,9 +123,9 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
     width: 100vw;
 		
 	}
-#lst_mnu table {
-    max-width: 400px;
-    width: 100% !important;
+.main_scr {
+    width: 100vw;
+    height:100% !important;	
   }
 		 
 
@@ -158,14 +158,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		width: 100vw;
 		
 	}
-		.sub_lst1
-	{
 		
-		display:none;
-		text-align:center;
-		width: 100vw;
-		
-	}
 		.sub_lst2
 	{
 		
@@ -211,9 +204,10 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 </head>
 
 <body style="background-color: transparent;" onload='init();'> 
+	<center>cookEZ</center>
 	<div id='main_scr' class='main_scr'>
 <table border="1" cellpadding="0" height='100%' cellspacing="0" width="100%">
-	<tr height='5%'><td colspan=2 align='center'><font face=arial><b>cookEZ</b></font></td></tr>
+	
 	<tr height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='dairy'><img src='dairy.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='veg'><img src='veg.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='meat'><img src='meat.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='bread'><img src='bread.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='season'><img src='seasoning.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='sauce'><img src='sauce.jpg' width='50%'></button></td></tr>
@@ -221,7 +215,8 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</table>
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
-		<select id='dairy'>
+		<center>Dairy </center>
+		<select id='dairy' multiple>
 			<option>Milk</option>
 			<option>Cheese</option>
 			<option>Yogurt</option>
@@ -231,7 +226,8 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	</div>
 	<div id='sub_lst2' class='sub_lst2' align='center'>
-		<select id='vegetables'>
+		<center>Vegetables </center>
+		<select id='veg' multiple>
 			<option>Bell Pepper (Capsicum)</option>
 			<option>Potato</option>
 			<option>Onion</option>
