@@ -4,17 +4,9 @@
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 <title><center><font face=verdana size=12>cookEZ</font></center></title>
 <script type="text/javascript" src="cordova.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script type="text/javascript" src="html2canvas.js"></script>
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="tableExport.js"></script>
 <script type="text/javascript" src="jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="jquery-ui.css"> 
 <script type="text/javascript" src="jquery.multiselect.js"></script>
-<script type="text/javascript" src="jquery.base64.js"></script>
-<script type="text/javascript" charset="utf-8" src="Canvas2ImagePlugin.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="canvas2image.js"></script>
 
 
 <!--<script language="JavaScript" type="text/javascript" src="events.js"></script>-->
@@ -156,7 +148,7 @@ function cat_list(x)
      document.getElementById("sub_lst6").style.display = "none";
      document.getElementById("sub_lst6").style.visibility="false";		   
     }
-	else if(x=='sauce')
+	else 
    {
      document.getElementById("sub_lst6").style.display = "block";
      document.getElementById("sub_lst6").style.visibility="true";	
@@ -176,8 +168,10 @@ function cat_list(x)
      document.getElementById("sub_lst2").style.display = "none";
      document.getElementById("sub_lst2").style.visibility="false";		   
     }
-  $(function(){
-	$("select").multiselect();
+  $("select").multiselect({
+   selectedText: function(numChecked, numTotal, checkedItems){
+      return numChecked + ' of ' + numTotal + ' checked';
+   }
 });
 }
 	
@@ -231,28 +225,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
     height:100% !important;	
   }
 		 
-
-	#evt_lst
-	{
-		display:none;
-		height: 100vh;
-		
-	}
-	.map_c
-	{
-		 width: 100vw;
-	}
-		
-		
-		 #middlecol {
-    border-right: 2px solid red;
-    width: 45%;
-  }
-
-  #middlecol table {
-    max-width: 400px;
-    width: 100% !important;
-  }
+	
 	.sub_lst1
 	{
 		
