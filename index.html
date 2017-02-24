@@ -168,13 +168,13 @@ function cat_list(x)
      document.getElementById("sub_lst2").style.display = "none";
      document.getElementById("sub_lst2").style.visibility="false";		   
     }
-  $("select").multiselect({
-   selectedText: function(numChecked, numTotal, checkedItems){
-      return numChecked + ' of ' + numTotal + ' checked';
-   }
-});
+$('select').on('change', function() {
+    getChecked($(this).prop('name'));
+});  
 }
-	
+function getChecked(element){
+    $('.log').append('<br/>Selected element: ' + $('select[name="' + element + '"] option:selected').text());
+}
 </script>
 	
 	<style type="text/css">
