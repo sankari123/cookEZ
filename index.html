@@ -176,6 +176,7 @@ $('select').on('change', function() {
 });  
 	
 function getChecked(element){
+	alert('in');
     $('.log').append('<br/>Selected element: ' + $('select[name="' + element + '"] option:selected').text());
 }
 </script>
