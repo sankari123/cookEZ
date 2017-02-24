@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 <title><center><font face=verdana size=12>cookEZ</font></center></title>
 <script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="jquery-ui.min.js"></script>
+<!--<script type="text/javascript" src="jquery-ui.min.js"></script>-->
 <!--<link rel="stylesheet" type="text/css" href="jquery-ui.css"> -->
 <!---<script type="text/javascript" src="jquery.multiselect.js"></script>-->
 
@@ -168,10 +168,13 @@ function cat_list(x)
      document.getElementById("sub_lst2").style.display = "none";
      document.getElementById("sub_lst2").style.visibility="false";		   
     }
+
+}
+	
 $('select').on('change', function() {
     getChecked($(this).prop('name'));
 });  
-}
+	
 function getChecked(element){
     $('.log').append('<br/>Selected element: ' + $('select[name="' + element + '"] option:selected').text());
 }
@@ -292,7 +295,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" name="dairy" size="8">
+		<select multiple="multiple" name="dairy" size="20">
 			<option>Milk</option>
 			<option>Cheese</option>
 			<option>Yogurt</option>
