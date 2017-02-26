@@ -171,20 +171,15 @@ function cat_list(x)
 
 }
 	
-$('select').on('change', function() {
-    getChecked($(this).prop('name'));
-});  
-	
-function getChecked(element){
-	alert('in');
-    $('.log').append('<br/>Selected element: ' + $('select[name="' + element + '"] option:selected').text());
-}
-	
+
 function getData(x)
 {
-var t = document.getElementById("dairy");
-var selectedText = t.options[t.selectedIndex].text;
-alert(selectedText);
+$('#dairy').change(function(){
+    var meals = $(this).val();
+    var selectedmeals = meals.join(", "); // there is a break after comma
+
+    alert (selectedmeals); // just for testing what will be printed
+})
 }
 </script>
 	
