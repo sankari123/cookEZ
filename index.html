@@ -179,6 +179,11 @@ function getChecked(element){
 	alert('in');
     $('.log').append('<br/>Selected element: ' + $('select[name="' + element + '"] option:selected').text());
 }
+	
+function getData()
+{
+alert(this.value);
+}
 </script>
 	
 	<style type="text/css">
@@ -296,12 +301,12 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" name="dairy" size="20">
-			<option>Milk</option>
-			<option>Cheese</option>
-			<option>Yogurt</option>
-			<option>Paneer</option>
-			<option>Butter</option>
+		<select multiple="multiple" name="dairy" size="20" onChange="getData(this.value);">
+			<option value='milk'>Milk</option>
+			<option value='cheese'>Cheese</option>
+			<option value='yogurt'>Yogurt</option>
+			<option value='paneer'>Paneer</option>
+			<option value='butter'>Butter</option>
 		</select>
 		
 	</div>
