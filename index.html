@@ -182,6 +182,8 @@ function getChecked(element){
 	
 function getData(x)
 {
+var t = document.getElementById("dairy");
+var selectedText = t.options[t.selectedIndex].text;
 alert(x);
 }
 </script>
@@ -301,7 +303,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" name="dairy" size="20" onChange="getData(this.value);">
+		<select multiple="multiple"id="dairy" size="20" onChange="getData(this.value);">
 			<option value='milk'>Milk</option>
 			<option value='cheese'>Cheese</option>
 			<option value='yogurt'>Yogurt</option>
