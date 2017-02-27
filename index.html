@@ -192,7 +192,6 @@ function getData(x)
 		#select{
     /* Suggestions found: having trouble with not being able to select items: */
     -webkit-user-select: auto !important;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
     z-index:1000 !important;
 }
 		
@@ -304,7 +303,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" id="dairy" size="20" style="width:400px;" onChange="getData(this.value);">
+		<select multiple="multiple" id="dairy" size="20" onChange="getData(this.value);">
 			<option value='milk'>Milk</option>
 			<option value='cheese'>Cheese</option>
 			<option value='yogurt'>Yogurt</option>
