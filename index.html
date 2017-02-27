@@ -188,6 +188,14 @@ function getData(x)
     padding: 0;
     
 }
+		
+		#select{
+    /* Suggestions found: having trouble with not being able to select items: */
+    -webkit-user-select: auto !important;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index:1000 !important;
+}
+		
 		.ven
 		{
 		 width: 100vw;
@@ -279,8 +287,6 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	}
 		
-	#select{height: 30px !important; padding: 0 30px 0 5px; -webkit-appearance: none; border-radius: 3px; border: 1px solid #aaaaaa; background: url(../images/btn/btn_select.png), -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#eee)); background-repeat: no-repeat, repeat; background-size: 30px, 100%; background-position: right center, left top; letter-spacing: 0em; vertical-align: middle; font-size: 1em;}
-.selectArea {display:none; position:relative; height:50px; background:#e3e0f3;}
 	</style>
 	
 </head>
@@ -298,7 +304,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" id="dairy" class='selectArea' size="20" style="width:400px;" onChange="getData(this.value);">
+		<select multiple="multiple" id="dairy" size="20" style="width:400px;" onChange="getData(this.value);">
 			<option value='milk'>Milk</option>
 			<option value='cheese'>Cheese</option>
 			<option value='yogurt'>Yogurt</option>
