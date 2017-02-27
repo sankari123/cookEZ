@@ -303,7 +303,8 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" id="dairy" size="20" onChange="getData(this.value);">
+		<select multiple="multiple" id="dairy" size="20" onChange="getData(this.value);" data-native-menu="false">
+			<option value="" data-placeholder="true">Select Group</option>
 			<option value='milk'>Milk</option>
 			<option value='cheese'>Cheese</option>
 			<option value='yogurt'>Yogurt</option>
