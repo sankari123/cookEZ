@@ -70,7 +70,7 @@ function cat_list(x)
      document.getElementById("sub_lst1").style.display = "none";
      document.getElementById("sub_lst1").style.visibility="false";	
 	  
-     document.getElementById("sub_lst3").style.display = "none";
+     document.getElementById("sub_lst3").style.display = "none";/
      document.getElementById("sub_lst3").style.visibility="false";
 	   
      document.getElementById("sub_lst4").style.display = "none";
@@ -282,8 +282,8 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<table align='center' cellpadding='0' cellspacing='0'>
 	  <tr height='40px'><td><b>Dairy</b></td></tr></table>
-		<select data-role="select" style='width:400px;' multiple='multiple' name="dairy" id="dairy" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
-			<option value='milk'>Milk</option>
+		<select data-role="select" style='width:400px;' size='10' multiple='multiple' name="dairy" id="dairy" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
+			<option value='milk'>Milk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
 			<option value='cheese'>Cheese</option>
 			<option value='yogurt'>Yogurt</option>
 			<option value='paneer'>Paneer</option>
@@ -293,7 +293,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst2' class='sub_lst2' align='center'>
 		<center>Vegetables </center>
-		<select multiple name='veg' size='10'>
+		<select data-role="select" style='width:400px;' size='10' multiple='multiple' name="veg" id="veg" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
 			<option>Bell Pepper (Capsicum)</option>
 			<option>Potato</option>
 			<option>Onion</option>
@@ -309,7 +309,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	
 	<div id='sub_lst3' class='sub_lst3' align='center'>
-		<select multiple name='meat' size='10'>
+		<select data-role="select" style='width:400px;' size='10' multiple='multiple' name="meat" id="meat" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
 			<option>Mutton</option>
 			<option>Beef</option>
 			<option>Ham</option>
@@ -321,7 +321,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	</div>
 	<div id='sub_lst4' class='sub_lst4' align='center'>
-		<select multiple name='bread' size='10' >
+		<select data-role="select" style='width:400px;' size='10' multiple='multiple' name="bread" id="bread" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
 			<option>Baguette</option>
 			<option>Bagel</option>
 			<option>Tortilla</option>
@@ -336,7 +336,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	
 	<div id='sub_lst5' class='sub_lst5' align='center'>
-		<select multiple name='season' size='10'>
+		<select data-role="select" style='width:400px;' size='10' multiple='multiple' name="season" id="season" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
 			<option>Anise</option>
 			<option>Basil</option>
 			<option>Black Pepper</option>
@@ -353,7 +353,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 		
 	</div>
 	<div id='sub_lst6' class='sub_lst6' align='center'>
-		<select multiple name='sauce' size='10'>
+		<select data-role="select" style='width:400px;' size='10' multiple='multiple' name="sauce" id="sauce" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
 			<option>Pasta Sauce</option>
 			<option>Chilly Sauce</option>
 			<option>Green Sauce</option>
