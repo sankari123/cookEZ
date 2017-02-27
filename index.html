@@ -5,6 +5,7 @@
 <title><center><font face=verdana size=12>cookEZ</font></center></title>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
 <!--<link rel="stylesheet" type="text/css" href="jquery-ui.css"> -->
 <!---<script type="text/javascript" src="jquery.multiselect.js"></script>-->
 
@@ -303,8 +304,7 @@ button:focus {outline:none;} ::-moz-focus-inner {border:0;}
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		<center>Dairy </center>
-		<select multiple="multiple" id="dairy" size="20" onChange="getData(this.value);" data-native-menu="false">
-			<option value="" data-placeholder="true">Select Group</option>
+		<select multiple="multiple" id="dairy" name='dairy' size="20" onChange="getData(this.value);" data-native-menu="false">
 			<option value='milk'>Milk</option>
 			<option value='cheese'>Cheese</option>
 			<option value='yogurt'>Yogurt</option>
