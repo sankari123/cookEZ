@@ -35,140 +35,20 @@ else{
      navigator.app.exitApp(); }
    else if (navigator.device) {
      navigator.device.exitApp(); } }	}
-	   
-function cat_list(x)
+
+	
+function cat1_list(x)
 {
    document.getElementById("main_scr").style.display = "none";
    document.getElementById("main_scr").style.visibility="false";	   
    
-	if(x=='dairy')
+if(x=='dairy')
    {
      document.getElementById("sub_lst1").style.display = "block";
      document.getElementById("sub_lst1").style.visibility="true";
 	   
-     document.getElementById("sub_lst2").style.display = "none";
-     document.getElementById("sub_lst2").style.visibility="false";	
-	  
-     document.getElementById("sub_lst3").style.display = "none";
-     document.getElementById("sub_lst3").style.visibility="false";
-	   
-     document.getElementById("sub_lst4").style.display = "none";
-     document.getElementById("sub_lst4").style.visibility="false";
-	   
-     document.getElementById("sub_lst5").style.display = "none";
-     document.getElementById("sub_lst5").style.visibility="false";	
-	  
-     document.getElementById("sub_lst6").style.display = "none";
-     document.getElementById("sub_lst6").style.visibility="false";		   
-	   
-    }
-	else if(x=='veg')
-   {
-     document.getElementById("sub_lst2").style.display = "block";
-     document.getElementById("sub_lst2").style.visibility="true";	
-	   
-	   
-     document.getElementById("sub_lst1").style.display = "none";
-     document.getElementById("sub_lst1").style.visibility="false";	
-	  
-     document.getElementById("sub_lst3").style.display = "none";/
-     document.getElementById("sub_lst3").style.visibility="false";
-	   
-     document.getElementById("sub_lst4").style.display = "none";
-     document.getElementById("sub_lst4").style.visibility="false";
-	   
-     document.getElementById("sub_lst5").style.display = "none";
-     document.getElementById("sub_lst5").style.visibility="false";	
-	  
-     document.getElementById("sub_lst6").style.display = "none";
-     document.getElementById("sub_lst6").style.visibility="false";	
-	   
-    }
-	else if(x=='meat')
-   {
-     document.getElementById("sub_lst3").style.display = "block";
-     document.getElementById("sub_lst3").style.visibility="true";
-
-     document.getElementById("sub_lst1").style.display = "none";
-     document.getElementById("sub_lst1").style.visibility="false";	
-	  
-     document.getElementById("sub_lst2").style.display = "none";
-     document.getElementById("sub_lst2").style.visibility="false";
-	   
-     document.getElementById("sub_lst4").style.display = "none";
-     document.getElementById("sub_lst4").style.visibility="false";
-	   
-     document.getElementById("sub_lst5").style.display = "none";
-     document.getElementById("sub_lst5").style.visibility="false";	
-	  
-     document.getElementById("sub_lst6").style.display = "none";
-     document.getElementById("sub_lst6").style.visibility="false";	
-    }
-	else if(x=='bread')
-   {
-     document.getElementById("sub_lst4").style.display = "block";
-     document.getElementById("sub_lst4").style.visibility="true";
-	   
-     document.getElementById("sub_lst1").style.display = "none";
-     document.getElementById("sub_lst1").style.visibility="false";	
-	  
-     document.getElementById("sub_lst3").style.display = "none";
-     document.getElementById("sub_lst3").style.visibility="false";
-	   
-     document.getElementById("sub_lst2").style.display = "none";
-     document.getElementById("sub_lst2").style.visibility="false";
-	   
-     document.getElementById("sub_lst5").style.display = "none";
-     document.getElementById("sub_lst5").style.visibility="false";	
-	  
-     document.getElementById("sub_lst6").style.display = "none";
-     document.getElementById("sub_lst6").style.visibility="false";		   
-	   
-    }
-      else if(x=='season')
-   {
-     document.getElementById("sub_lst5").style.display = "block";
-     document.getElementById("sub_lst5").style.visibility="true";
-     
-     document.getElementById("sub_lst1").style.display = "none";
-     document.getElementById("sub_lst1").style.visibility="false";	
-	  
-     document.getElementById("sub_lst3").style.display = "none";
-     document.getElementById("sub_lst3").style.visibility="false";
-	   
-     document.getElementById("sub_lst4").style.display = "none";
-     document.getElementById("sub_lst4").style.visibility="false";
-	   
-     document.getElementById("sub_lst2").style.display = "none";
-     document.getElementById("sub_lst2").style.visibility="false";	
-	  
-     document.getElementById("sub_lst6").style.display = "none";
-     document.getElementById("sub_lst6").style.visibility="false";		   
-    }
-	else 
-   {
-     document.getElementById("sub_lst6").style.display = "block";
-     document.getElementById("sub_lst6").style.visibility="true";	
-	   
-     document.getElementById("sub_lst1").style.display = "none";
-     document.getElementById("sub_lst1").style.visibility="false";	
-	  
-     document.getElementById("sub_lst3").style.display = "none";
-     document.getElementById("sub_lst3").style.visibility="false";
-	   
-     document.getElementById("sub_lst4").style.display = "none";
-     document.getElementById("sub_lst4").style.visibility="false";
-	   
-     document.getElementById("sub_lst5").style.display = "none";
-     document.getElementById("sub_lst5").style.visibility="false";	
-	  
-     document.getElementById("sub_lst2").style.display = "none";
-     document.getElementById("sub_lst2").style.visibility="false";		   
-    }
-
+   }
 }
-	
-
 function getData(x)
 {
 	var values = $('#dairy').val();
@@ -177,7 +57,7 @@ function getData(x)
 }
 </script>
 	
-	<style type="text/css">
+<style type="text/css">
 body, html {
     width: 100%;
     height: 100vh;
@@ -186,12 +66,6 @@ body, html {
     
 }
 		
-		
-.hideDontTakeUpSpace
-        {
-            display:none;
-        }
-
 .btn1 {  background-color: transparent; border:none; padding: 0; font-weight: bold; color: white;}
 .btn2 {  background-color: transparent; border:none; padding: 0; font-weight: bold; color: black;}
 .main_scr {
@@ -199,44 +73,9 @@ body, html {
     height:100% !important;	
   }
 		 
-	.sub_lst1
+.sub_lst1
 	{
-		
-		display:none;
-		
-	}
-		
-		.sub_lst2
-	{
-		
-		display:none;
-		
-	}
-		.sub_lst3
-	{
-		
-		display:none;
-		
-		
-	}
-		.sub_lst4
-	{
-		
-		display:none;
-		
-		
-	}
-		.sub_lst5
-	{
-		
-		display:none;
-		
-	}
-		.sub_lst6
-	{
-		
-		display:none;
-		
+	display:none;
 	}
 		
 	</style>
@@ -245,9 +84,9 @@ body, html {
 
 <body style="background-color: transparent;" onload='init();'> 
 	<table bgcolor="#DAD4D3" align='center' cellpadding='0' cellspacing='0' width='100%' height='10%'> 
-	  <tr height='40px'><td align='center'><b>cookEZ</b></td></tr></table>
+	<tr height='40px'><td align='center'><b>cookEZ</b></td></tr></table>
 	<div id='main_scr' class='main_scr'>
-<table border="0" cellpadding="0" cellspacing="0">
+        <table border="0" cellpadding="0" cellspacing="0">
 	<tr height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='dairy'><img src='dairy.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='veg'><img src='veg.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='meat'><img src='meat.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='bread'><img src='bread.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='season'><img src='seasoning.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat_list(this.value);' class='btn2' value='sauce'><img src='sauce.jpg' width='50%'></button></td></tr>
@@ -264,9 +103,6 @@ body, html {
 			<option value='butter'>Butter</option>
 			<option value='butter'>Buttermilk</option>
 		</select>
-		
-	</div>
-	
-	
+        </div>
 </body>
 </html>
