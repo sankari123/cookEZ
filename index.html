@@ -220,12 +220,32 @@ body, html {
 	
 .btn2 {  background-color: transparent; border:none; padding: 0; font-weight: bold; color: black;}
 .btn1 {  background-color: transparent; border: 0; padding: 0;}
-	
+
 .main_scr {
     width: 100vw;
     height:100% !important;	
   }
-		 
+.tbl_css
+{
+    position:fixed;
+    height:100%; !important;	
+    width: 100vw;
+    border:3px solid #fff;
+    background:#000;
+    box-sizing:border-box; /* causes item size to include border and padding */
+    -moz-box-sizing:border-box; /*for browser compatibility*/
+}
+	.back_css
+{
+    position:fixed;
+    height:10%; !important;	
+    width: 100vw;
+    border:0px solid #fff;
+    background:#000;
+    box-sizing:border-box; /* causes item size to include border and padding */
+    -moz-box-sizing:border-box; /*for browser compatibility*/
+}
+
 .sub_lst1
 	{
 	display:none;
@@ -258,7 +278,7 @@ body, html {
 	<table bgcolor="#DAD4D3" align='center' cellpadding='0' cellspacing='0' width='100%' height='10%'> 
 	<tr height='40px'><td align='center'><b>cookEZ</b></td></tr></table>
 	<div id='main_scr' class='main_scr'>
-        <table border="0" height="100%" cellpadding="0" cellspacing="0">
+        <table border="0" class='tbl-css' cellpadding="0" cellspacing="0">
 	<tr height='30%'><td width='50%' align='center'><button onclick='cat1_list(this.value);' class='btn2' value='dairy'><img src='dairy.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat1_list(this.value);' class='btn2' value='veg'><img src='veg.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat1_list(this.value);' class='btn2' value='meat'><img src='meat.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat1_list(this.value);' class='btn2' value='bread'><img src='bread.jpg' width='50%'></button></td></tr>
 	<tr  height='30%'><td width='50%' align='center'><button onclick='cat1_list(this.value);' class='btn2' value='season'><img src='seasoning.jpg' width='50%'></button></td><td width='50%' align='center'><button onclick='cat1_list(this.value);' class='btn2' value='sauce'><img src='sauce.jpg' width='50%'></button></td></tr>
@@ -267,8 +287,8 @@ body, html {
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
 		
-		<table border="0" height="10%" width='100%' cellpadding="0" cellspacing="0">
-		<tr bordercolor='ffffff'><td align='center' width='90%'>Dairy</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
+		<table class='back_css' border="0" bgcolor='ffffff' cellpadding="0" cellspacing="0">
+		<tr bordercolor='ffffff'><td align='center' width='90%'>Dairy</td><td align='right'><button onclick='back_chk();' class='btn2'>Back</button></td></tr></table>
 		<select data-role="select" style='width:400px;' multiple='multiple' name="dairy" id="dairy" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
 			<option value='milk'>Milk</option>
 			<option value='cheese'>Cheese</option>
