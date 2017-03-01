@@ -18,20 +18,19 @@
 <script>
 function alertDismissed() {
             alert('ddd');
-        }	
+}	
 function init() {
     	document.addEventListener("deviceready", onDeviceReady, false);
-	
 }
 	
 function onDeviceReady()
-	{	
+{	
 //window.plugins.spinnerDialog.show(null,'Loading Data... Please wait!');
 document.addEventListener("backbutton", function (e) {
         e.preventDefault(); 
     navigator.notification.confirm("Do you want to exit cookEZ?", onConfirmExit, "cookEZ", "Yes,No");
     }, false );
-	}	
+}	
 	
 function onConfirmExit(button) {
 if(button==2){ //If User select a No, then return back;
