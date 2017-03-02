@@ -56,9 +56,10 @@ function getExif() {
         var allMetaData = EXIF.getAllTags(this);
         var allMetaDataSpan = document.getElementById("allMetaDataSpan");
         allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
-	var stringArray = document.getElementById('allMetaDataSpan').value.split('\n');
-	 document.getElementById('txtAreaSpan').value=stringArray;
+	
     });
+var stringArray = document.getElementById('allMetaDataSpan').value.split('\t');
+	 document.getElementById('txtAreaSpan').value=stringArray;
 }
 	
 function cat1_list(x)
