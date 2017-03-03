@@ -64,17 +64,17 @@ var s=document.getElementById('txtAreaSpan').value;
 var n = s.search("GPSLatitudeRef");
 alert('s'+s);
 alert('n='+n);
+var res = n.substring(n, s.length);
 //var res = n.substring(n, searchTxt.length);
-//findMyText(stringArray);
+findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
 }
 function findMyText(searchTxt) {
 alert('in');
-var n = searchTxt.indexOf("GPSLatitudeRef");
-var res = n.substring(n, searchTxt.length);
-document.getElementById("txtAreaSpan").value= res;
-alert(n);
-alert(res);
+//var n = searchTxt.indexOf("GPSLatitudeRef");
+//var res = n.substring(n, searchTxt.length);
+document.getElementById("txtAreaSpan").value= searchTxt;
+
 }
 	
 	
