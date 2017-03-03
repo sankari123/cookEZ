@@ -61,10 +61,10 @@ function getExif() {
 var stringArray = allMetaDataSpan.innerHTML.split('\t');
 document.getElementById('txtAreaSpan').value=stringArray;
 var s=document.getElementById('txtAreaSpan').value;
-var n = s.search("GPSLatitudeRef");
+var n = s.search("GPSLatitudeRef:");
 alert('s'+s);
 alert('n='+n);
-var res = s.substring(s.length,n);
+var res = s.substring(s.length,n+3);
 //var res = n.substring(n, searchTxt.length);
 findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
