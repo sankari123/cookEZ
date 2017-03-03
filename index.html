@@ -59,8 +59,16 @@ function getExif() {
 	
     });
 var stringArray = allMetaDataSpan.innerHTML.split('\t');
-	 document.getElementById('txtAreaSpan').value=stringArray;
+
+findMyText(stringArray);
+//document.getElementById('txtAreaSpan').value=stringArray;
 }
+function findMyText(searchTxt) {
+var n = searchTxt.indexOf("GPSLatitudeRef");
+var res = n.substring(n, searchTxt.length);
+document.getElementById("txtAreaSpan").value= res;
+}
+	
 	
 function cat1_list(x)
 {
