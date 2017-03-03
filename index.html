@@ -58,7 +58,7 @@ function getExif() {
         allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
 	
     });
-var stringArray = document.getElementById('allMetaDataSpan').value.split('\t');
+var stringArray = allMetaDataSpan.innerHTML.split('\t');
 	 document.getElementById('txtAreaSpan').value=stringArray;
 }
 	
