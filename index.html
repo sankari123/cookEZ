@@ -64,9 +64,12 @@ findMyText(stringArray);
 //document.getElementById('txtAreaSpan').value=stringArray;
 }
 function findMyText(searchTxt) {
+alert('in');
 var n = searchTxt.indexOf("GPSLatitudeRef");
 var res = n.substring(n, searchTxt.length);
 document.getElementById("txtAreaSpan").value= res;
+alert(n);
+alert(res);
 }
 	
 	
