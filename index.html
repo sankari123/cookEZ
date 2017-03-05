@@ -7,7 +7,8 @@
 <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>	-->
-
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
 <script src="jquery-1.8.2.min.js"></script>
 <script src="jquery.mobile-1.2.0.min.js"></script>
@@ -18,6 +19,10 @@
 
 <script>
 	var meData;
+	var tag1;
+	var tag2;
+	var tag3;
+	var tag4;
 	function alertDismissed() {
             alert('ddd');
 }	
@@ -56,10 +61,10 @@ function getExif() {
     EXIF.getData(img2, function() {
        // var allMetaData = EXIF.getAllTags(this,"GPSLatitude");
 	  //   var allMetaData = EXIF.getTag(this,"GPSLatitude");
-	    var tag1=EXIF.getTag(this,"GPSLatitudeRef");
-	    var tag2=EXIF.getTag(this,"GPSLatitude");
-	    var tag3=EXIF.getTag(this,"GPSLongitudeRef");
-	    var tag4=EXIF.getTag(this,"GPSLongitude");
+	     tag1=EXIF.getTag(this,"GPSLatitudeRef");
+	    tag2=EXIF.getTag(this,"GPSLatitude");
+	   tag3=EXIF.getTag(this,"GPSLongitudeRef");
+	   tag4=EXIF.getTag(this,"GPSLongitude");
 	    var GeoTag=tag2+"!"+tag1+"!"+tag4+"!"+tag3;
 	     allMetaDataSpan.innerHTML=`${tag1} ${tag2} ${tag3} ${tag4}`;
        // var allMetaDataSpan = document.getElementById("allMetaDataSpan");
@@ -71,18 +76,64 @@ function getExif() {
 	var stringArray = allMetaDataSpan.innerHTML;
 //document.getElementById('txtAreaSpan').value=trim(stringArray);
 meData=stringArray;
+
 	
-//	alert(meData);
+//Display Deg Minutes sec in google map
+//4330.4850 N represents 43 degrees 30 minutes and 48.50 seconds
+//08011.4392 W represents 80 degrees 11 minutes and 43.92 seconds
+//so that's GLatLng(43.513472,-80.195533)
+//Pine Ridge Park, Guelph, Ontario
+
+//http://maps.google.com/maps?q=43+30+48.50,-80+11+43.92
+alert(meData);
 //var res = n.substring(n, searchTxt.length);
 //findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
+
 }
-function getData() {
-document.getElementById("allMetaDataSpan").style.display = "none";
-document.getElementById("allMetaDataSpan").style.visibility="false";
-document.getElementById("makeAndModel").style.display = "none";
-document.getElementById("makeAndModel").style.visibility="false";
 	
+function dms2deg() {
+  // Determine if south latitude or west longitude
+	var s=meData;
+  var sw = /[sw]/i.test(s);
+
+  // Determine sign based on sw (south or west is -ve) 
+  var f = sw? -1 : 1;
+
+  // Get into numeric parts
+  var bits = s.match(/[\d.]+/g);
+
+  var result = 0;
+
+  // Convert to decimal degrees
+  for (var i=0, iLen=bits.length; i<iLen; i++) {
+
+    // String conversion to number is done by division
+    // To be explicit (not necessary), use 
+    //   result += Number(bits[i])/f
+    result += bits[i]/f;
+
+    // Divide degrees by +/- 1, min by +/- 60, sec by +/-3600
+    f *= 60;
+  }
+
+  return result;
+}
+
+
+		
+function getData() {
+var array1 = tag2.split(',');
+var lat1=tag1+" "+array1[0]+" "+array1[1]+"\"+" "+array1[2]+"\";
+	alert(lat1);
+//dms2deg(tag2'S 023 30\'')
+
+//alert( 
+//  dms2deg('S 023 30\'') + '\n' +      // -23.5
+//  dms2deg('N 023 00\' 00\"') + '\n' + //  23
+//  dms2deg('W 117 23\' 23.32\"')       // -117.3898111111111
+//);
+ 	
 //document.getElementById('txtAreaSpan').value;
 //var s=document.getElementById('txtAreaSpan').value;
 //var n = s.search("Ref");
