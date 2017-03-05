@@ -55,9 +55,16 @@ function getExif() {
     var img2 = document.getElementById("img2");
     EXIF.getData(img2, function() {
        // var allMetaData = EXIF.getAllTags(this,"GPSLatitude");
-	     var allMetaData = EXIF.getTag(this,"GPSLatitude");
-        var allMetaDataSpan = document.getElementById("allMetaDataSpan");
-        allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
+	  //   var allMetaData = EXIF.getTag(this,"GPSLatitude");
+	    var tag1=EXIF.getTag(this,"GPSLatitudeRef");
+	    var tag2=EXIF.getTag(this,"GPSLatitude");
+	    var tag3=EXIF.getTag(this,"GPSLongitudeRef");
+	    var tag4=EXIF.getTag(this,"GPSLongitude");
+	    var GeoTag=tag2+"!"+tag1+"!"+tag4+"!"+tag3;
+	    
+       // var allMetaDataSpan = document.getElementById("allMetaDataSpan");
+       // allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
+	allMetaDataSpan.innerHTML = JSON.stringify(GeoTag, null, "\t");
 	
     });
 //var stringArray = allMetaDataSpan.innerHTML.split('\t');
@@ -65,7 +72,7 @@ function getExif() {
 //document.getElementById('txtAreaSpan').value=trim(stringArray);
 meData=stringArray;
 	
-	alert(meData);
+//	alert(meData);
 //var res = n.substring(n, searchTxt.length);
 //findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
@@ -79,11 +86,11 @@ document.getElementById("makeAndModel").style.visibility="false";
 var s=meData;
 //document.getElementById('txtAreaSpan').value;
 //var s=document.getElementById('txtAreaSpan').value;
-var n = s.search("Ref");
-alert('s'+s);
-alert('n='+n);
-var res = s.substring(s.length,n+3);
-alert(res);
+//var n = s.search("Ref");
+//alert('s'+s);
+//alert('n='+n);
+//var res = s.substring(s.length,n+3);
+alert(meData);
 //document.getElementById('txtAreaSpan').value=searchTxt;
 //var n = searchTxt.indexOf("GPSLatitudeRef");
 //var res = n.substring(n, searchTxt.length);
