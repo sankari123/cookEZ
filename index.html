@@ -61,10 +61,10 @@ function getExif() {
 	    var tag3=EXIF.getTag(this,"GPSLongitudeRef");
 	    var tag4=EXIF.getTag(this,"GPSLongitude");
 	    var GeoTag=tag2+"!"+tag1+"!"+tag4+"!"+tag3;
-	    
+	     allMetaDataSpan.innerHTML=`${tag1} ${tag2} ${tag3} ${tag4}`;
        // var allMetaDataSpan = document.getElementById("allMetaDataSpan");
        // allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
-	allMetaDataSpan.innerHTML = JSON.stringify(GeoTag, null, "\t");
+//	allMetaDataSpan.innerHTML = JSON.stringify(GeoTag, null, "\t");
 	
     });
 //var stringArray = allMetaDataSpan.innerHTML.split('\t');
@@ -83,14 +83,13 @@ document.getElementById("allMetaDataSpan").style.visibility="false";
 document.getElementById("makeAndModel").style.display = "none";
 document.getElementById("makeAndModel").style.visibility="false";
 	
-var s=meData;
 //document.getElementById('txtAreaSpan').value;
 //var s=document.getElementById('txtAreaSpan').value;
 //var n = s.search("Ref");
 //alert('s'+s);
 //alert('n='+n);
 //var res = s.substring(s.length,n+3);
-alert(meData);
+alert('meData'+meData);
 //document.getElementById('txtAreaSpan').value=searchTxt;
 //var n = searchTxt.indexOf("GPSLatitudeRef");
 //var res = n.substring(n, searchTxt.length);
