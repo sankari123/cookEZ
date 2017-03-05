@@ -60,7 +60,8 @@ function getExif() {
     });
 var stringArray = allMetaDataSpan.innerHTML.split('\t');
 document.getElementById('txtAreaSpan').value=trim(stringArray);
-var s=document.getElementById('txtAreaSpan').value;
+	var s=stringArray;
+//var s=document.getElementById('txtAreaSpan').value;
 var n = s.search("Ref");
 alert('s'+s);
 alert('n='+n);
@@ -71,6 +72,7 @@ findMyText(res);
 }
 function findMyText(searchTxt) {
 alert(searchTxt);
+document.getElementById('txtAreaSpan').value=searchTxt;
 //var n = searchTxt.indexOf("GPSLatitudeRef");
 //var res = n.substring(n, searchTxt.length);
 ///document.getElementById("txtAreaSpan").value= searchTxt;
@@ -418,7 +420,7 @@ body, html {
 <img src="geo_test.jpg" id="img2" width='50%' height='50%' />
 <pre id="allMetaDataSpan"></pre>
 <br/>
-<textarea id='txtAreaSpan' rows='8' cols=40></textarea>
+<textarea id='txtAreaSpan' rows='8' cols=90></textarea>
 
 	
 </body>
