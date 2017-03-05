@@ -54,7 +54,7 @@ function getExif() {
    // });
     var img2 = document.getElementById("img2");
     EXIF.getData(img2, function() {
-        var allMetaData = EXIF.getAllTags(this);
+        var allMetaData = EXIF.getAllTags(this,"GPSLatitude");
         var allMetaDataSpan = document.getElementById("allMetaDataSpan");
         allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
 	
@@ -63,6 +63,8 @@ function getExif() {
 	var stringArray = allMetaDataSpan.innerHTML;
 //document.getElementById('txtAreaSpan').value=trim(stringArray);
 meData=stringArray;
+	
+	alert(meData);
 //var res = n.substring(n, searchTxt.length);
 //findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
@@ -424,14 +426,14 @@ pre {
 		
 </div>
 <br>
-<img src="geo_test.jpg" id="img1" width='50%' height='50%' />
+<!---<img src="geo_test.jpg" id="img1" width='50%' height='50%' />
 <pre>Make and model: <span id="makeAndModel"></span></pre>
 <br/>
-<br/>
+<br/>-->
 <img src="geo_test.jpg" id="img2" width='50%' height='50%' />
 <pre id="allMetaDataSpan"></pre>
 <br/>
-<textarea id='txtAreaSpan' rows='8' cols=90></textarea>
+<textarea id='txtAreaSpan' rows='8' cols=90 readonly=true ></textarea>
 
 	
 </body>
