@@ -23,8 +23,10 @@
 	var tag2;
 	var tag3;
 	var tag4;
-	function alertDismissed() {
-            alert('ddd');
+	var array1;
+	var array2;
+function alertDismissed() {
+           alert('ddd');
 }	
 function init() {
     	document.addEventListener("deviceready", onDeviceReady, false);
@@ -74,7 +76,7 @@ function getExif() {
     });
 //var stringArray = allMetaDataSpan.innerHTML.split('\t');
 	var stringArray = allMetaDataSpan.innerHTML;
-//document.getElementById('txtAreaSpan').value=trim(stringArray);
+document.getElementById('txtAreaSpan').value=trim(stringArray);
 meData=stringArray;
 
 	
@@ -85,34 +87,42 @@ meData=stringArray;
 //Pine Ridge Park, Guelph, Ontario
 
 //http://maps.google.com/maps?q=43+30+48.50,-80+11+43.92
-alert(meData);
+//alert(meData);
 //var res = n.substring(n, searchTxt.length);
 //findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
 
 }
 	
+function ConvertDMSToDD(degrees, minutes, seconds, direction) {
+    var dd = degrees + minutes/60 + seconds/(60*60);
+
+    if (direction == "S" || direction == "W") {
+        dd = dd * -1;
+    } // Don't do anything for N or E
+    return dd;
+}
 	
 function getData() {
-var array1 = tag2.split(',');
+array1 = tag2.split(',');
+array2 = tag4.split(',');
 //var lat1=tag1.concat(str2);
-var lat1=tag1+' '+ array1[0]+' '+array1[1] + '\\'+' ' + array1[2]+'\\'+' ';
-alert(lat1);
-//dms2deg(tag2'S 023 30\'')
-
-//alert( 
-//  dms2deg('S 023 30\'') + '\n' +      // -23.5
-//  dms2deg('N 023 00\' 00\"') + '\n' + //  23
-//  dms2deg('W 117 23\' 23.32\"')       // -117.3898111111111
-//);
- 	
+//var parts = input.split(/[^\d\w]+/);
+var lat = ConvertDMSToDD(array1[0], array1[1], array1[2], tag1);	
+var lng = ConvertDMSToDD(array2[0], array2[1], array2[2], tag3);	
+// var parts = input.split(/[^\d\w]+/);
+ //   var lat = ConvertDMSToDD(parts[0], parts[1], parts[2], parts[3]);
+  //  var lng = ConvertDMSToDD(parts[4], parts[5], parts[6], parts[7]); 	
+//ConvertDMSToDD(array1[0], array1[1], array1[2], tag1);	
+alert('lat'+lat);
+alert('long'+lng);
 //document.getElementById('txtAreaSpan').value;
 //var s=document.getElementById('txtAreaSpan').value;
 //var n = s.search("Ref");
 //alert('s'+s);
 //alert('n='+n);
 //var res = s.substring(s.length,n+3);
-alert('meData'+meData);
+//alert('meData'+meData);
 //document.getElementById('txtAreaSpan').value=searchTxt;
 //var n = searchTxt.indexOf("GPSLatitudeRef");
 //var res = n.substring(n, searchTxt.length);
