@@ -17,7 +17,8 @@
 <script type="text/javascript" src="cordova.js"></script>
 
 <script>
-function alertDismissed() {
+	var meData;
+	function alertDismissed() {
             alert('ddd');
 }	
 function init() {
@@ -59,8 +60,8 @@ function getExif() {
 	
     });
 var stringArray = allMetaDataSpan.innerHTML.split('\t');
-document.getElementById('txtAreaSpan').value=trim(stringArray);
-
+//document.getElementById('txtAreaSpan').value=trim(stringArray);
+meData=stringArray;
 //var res = n.substring(n, searchTxt.length);
 //findMyText(res);
 //document.getElementById('txtAreaSpan').value=stringArray;
@@ -71,7 +72,8 @@ document.getElementById("allMetaDataSpan").style.visibility="false";
 document.getElementById("makeAndModel").style.display = "none";
 document.getElementById("makeAndModel").style.visibility="false";
 	
-var s=document.getElementById('txtAreaSpan').value;
+var s=meData;
+//document.getElementById('txtAreaSpan').value;
 //var s=document.getElementById('txtAreaSpan').value;
 var n = s.search("Ref");
 alert('s'+s);
