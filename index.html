@@ -77,7 +77,7 @@ function getExif() {
 //var stringArray = allMetaDataSpan.innerHTML.split('\t');
 	var stringArray = allMetaDataSpan.innerHTML;
 document.getElementById('txtAreaSpan').value=trim(stringArray);
-meData=stringArray;
+//meData=stringArray;
 
 	
 //Display Deg Minutes sec in google map
@@ -104,6 +104,7 @@ function ConvertDMSToDD(degrees, minutes, seconds, direction) {
 }
 	
 function getData() {
+	alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
 array1 = tag2.split(',');
 array2 = tag4.split(',');
 //var lat1=tag1.concat(str2);
