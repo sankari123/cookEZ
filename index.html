@@ -67,7 +67,7 @@ function getExif() {
 	    tag2=EXIF.getTag(this,"GPSLatitude");
 	   tag3=EXIF.getTag(this,"GPSLongitudeRef");
 	   tag4=EXIF.getTag(this,"GPSLongitude");
-	    var GeoTag=tag2+"!"+tag1+"!"+tag4+"!"+tag3;
+	//    var GeoTag=tag2+"!"+tag1+"!"+tag4+"!"+tag3;
 	     allMetaDataSpan.innerHTML=`${tag1} ${tag2} ${tag3} ${tag4}`;
        // var allMetaDataSpan = document.getElementById("allMetaDataSpan");
        // allMetaDataSpan.innerHTML = JSON.stringify(allMetaData, null, "\t");
@@ -102,6 +102,20 @@ function ConvertDMSToDD(degrees, minutes, seconds, direction) {
     } // Don't do anything for N or E
     return dd;
 }
+
+function listToAray(fullString, separator) {
+  var fullArray = [];
+
+  if (fullString !== undefined) {
+    if (fullString.indexOf(separator) == -1) {
+      fullAray.push(fullString);
+    } else {
+      fullArray = fullString.split(separator);
+    }
+  }
+
+  return fullArray;
+}
 	
 function getData11() {
 //alert('Oops..! ');
@@ -113,8 +127,8 @@ function getData11() {
 //alert(array1.length);	
 	
 alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
-array1 = tag2.split(",");
-array2 = tag4.split(",");
+array1 = listToArray(tag2, ',');
+//array2 = tag4.split(",");
 alert(array1.length);	
 
 //var lat1=tag1.concat(str2);
