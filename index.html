@@ -128,8 +128,13 @@ function getData11() {
 	
 alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
 array1 = listToArray(tag2, ',');
-array2 = tag4.split(',');
-alert(array1[0]);	
+str_array = tag4.split(',');
+for(var i = 0; i < str_array.length; i++) {
+   // Trim the excess whitespace.
+   str_array[i] = str_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
+   // Add additional code here, such as:
+   alert(str_array[i]);
+}	
 alert(array2[0]);	
 
 //var lat1=tag1.concat(str2);
