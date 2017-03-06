@@ -23,8 +23,8 @@
 	var tag2;
 	var tag3;
 	var tag4;
-	var array1;
-	var array2;
+	var array1= [];
+	var array2= [];
 function alertDismissed() {
            alert('ddd');
 }	
@@ -104,10 +104,11 @@ function ConvertDMSToDD(degrees, minutes, seconds, direction) {
 }
 	
 function getData11() {
-	 navigator.notification.alert('Oops..! No DIVE Joints found...', alertDismissed, 'DIVE Joints', 'OK');
-//	alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
-//array1 = tag2.split(',');
-//array2 = tag4.split(',');
+navigator.notification.alert('Oops..! No DIVE Joints found...', alertDismissed, 'DIVE Joints', 'OK');
+
+array1 = tag2.split(',');
+array2 = tag4.split(',');
+alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
 //var lat1=tag1.concat(str2);
 //var parts = input.split(/[^\d\w]+/);
 //var lat = ConvertDMSToDD(array1[0], array1[1], array1[2], tag1);	
