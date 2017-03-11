@@ -129,11 +129,12 @@ function getData11() {
 alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
 array1 = listToArray(tag2, ',');
 str_array = tag4.split(',');
-for(var i = 0; i < str_array.length; i++) {
+//for(var i = 0; i < str_array.length; i++) {
+	for(var i = 0; i < array1.length; i++) {
    // Trim the excess whitespace.
-   str_array[i] = str_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
+ //  array1[i] = array1[i].replace(/^\s*/, "").replace(/\s*$/, "");
    // Add additional code here, such as:
-   alert(str_array[i]);
+   alert(array1[i]);
 }	
 //alert(array2[0]);	
 
