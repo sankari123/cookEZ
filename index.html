@@ -103,18 +103,31 @@ function ConvertDMSToDD(degrees, minutes, seconds, direction) {
     return dd;
 }
 
-function listToAray(fullString, separator) {
-  var fullArray = [];
+function listToAray(fullString, separator)
+ {
 
-  if (fullString !== undefined) {
-    if (fullString.indexOf(separator) == -1) {
-      fullAray.push(fullString);
-    } else {
-      fullArray = fullString.split(separator);
-    }
-  }
+var fullArray = [];
 
-  return fullArray;
+ if (fullString !== undefined)
+ {
+    if (fullString.indexOf(separator) == -1)
+  {
+    
+  fullAray.push(fullString);
+ 
+   } 
+else 
+{
+    
+  fullArray = fullString.split(separator);
+ 
+   }
+ 
+ }
+
+  
+return fullArray;
+
 }
 	
 function getData11() {
@@ -127,8 +140,8 @@ function getData11() {
 //alert(array1.length);	
 	
 alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
-array1 = listToArray(tag2, ',');
-str_array = tag4.split(',');
+//array1 = listToArray(tag2, ',');
+array1 = tag2.split(',');
 //for(var i = 0; i < str_array.length; i++) {
 	for(var i = 0; i < array1.length; i++) {
    // Trim the excess whitespace.
