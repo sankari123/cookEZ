@@ -77,6 +77,7 @@ function getExif() {
 //var stringArray = allMetaDataSpan.innerHTML.split('\t');
 	var stringArray = allMetaDataSpan.innerHTML;
 document.getElementById('txtAreaSpan').value=trim(stringArray);
+document.getElementById('tg2').value=trim(tag2);	
 //meData=stringArray;
 
 	
@@ -496,7 +497,7 @@ pre {
 <pre id="allMetaDataSpan"></pre>
 <br/>
 <textarea id='txtAreaSpan' rows='8' cols=90 readonly=true ></textarea>
-
+<textarea id='tg2' rows='2' cols=90 readonly=true ></textarea>
 	
 </body>
 </html>
