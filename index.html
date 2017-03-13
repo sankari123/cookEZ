@@ -76,8 +76,7 @@ function getExif() {
     });
 //var stringArray = allMetaDataSpan.innerHTML.split('\t');
 	var stringArray = allMetaDataSpan.innerHTML;
-document.getElementById('txtAreaSpan').value=trim(stringArray);
-document.getElementById('tg2').value=trim(tag2);	
+
 //meData=stringArray;
 
 	
@@ -118,7 +117,9 @@ function getData11() {
 //alert(array1.length);	
 	
 alert('tag2= '+tag2+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
-//array1 = listToArray(tag2, ',');
+document.getElementById('txtAreaSpan').value=trim(stringArray);
+document.getElementById('tg2').value=trim(tag2);	
+	//array1 = listToArray(tag2, ',');
 array1 = string(tag2).split(',');
 //for(var i = 0; i < str_array.length; i++) {
 	for(var i = 0; i < array1.length; i++) {
