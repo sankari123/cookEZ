@@ -116,32 +116,35 @@ function getData11() {
 //alert(array1[0]);
 //alert(array1.length);	
 	var tg22=tag2.toString();
+	var tg33=tag4.toString();
 alert('tag2= '+tg22+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
 //document.getElementById('txtAreaSpan').value=trim(stringArray);
 //document.getElementById('tg2').value=tg22;	
 	//array1 = listToArray(tag2, ',');
 array1 = tg22.split(',');
+array2 = tg33.split(',');
 array1.push(tag1);
+array2.push(tag3);
 //for(var i = 0; i < str_array.length; i++) {
 	for(var i = 0; i < array1.length; i++) {
    // Trim the excess whitespace.
  //  array1[i] = array1[i].replace(/^\s*/, "").replace(/\s*$/, "");
    // Add additional code here, such as:
-   alert(array1[i]);
+  // alert(array1[i]);
 }
 	
 //alert(array2[0]);	
 
 //var lat1=tag1.concat(str2);
 //var parts = input.split(/[^\d\w]+/);
-//var lat = ConvertDMSToDD(array1[0], array1[1], array1[2], tag1);	
-//var lng = ConvertDMSToDD(array2[0], array2[1], array2[2], tag3);	
+var lat = ConvertDMSToDD(array1[0], array1[1], array1[2], array1[3]);	
+var lng = ConvertDMSToDD(array2[0], array2[1], array2[2], array2[3]);	
 // var parts = input.split(/[^\d\w]+/);
  //   var lat = ConvertDMSToDD(parts[0], parts[1], parts[2], parts[3]);
   //  var lng = ConvertDMSToDD(parts[4], parts[5], parts[6], parts[7]); 	
 //ConvertDMSToDD(array1[0], array1[1], array1[2], tag1);	
-//alert('lat'+lat);
-//alert('long'+lng);
+alert('lat'+lat);
+alert('long'+lng);
 //document.getElementById('txtAreaSpan').value;
 //var s=//document.getElementById('txtAreaSpan').value;
 //var n = s.search("Ref");
