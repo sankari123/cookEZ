@@ -317,9 +317,10 @@ else if(x=='sauce')
 
 	function getData(x)
 {
-	alert(x);
+	//alert(x);
 	
 	var values = $('#dairy').val();
+	alert(values);
 	itm_arr.push(values);
 	
 	if(x=='dairy')
@@ -353,6 +354,7 @@ else if(x=='sauce')
 }
 function getList()
 	{
+		alert('in');
 		for(var i = 0; i < itm_arr.length; i++) {
 	 
  alert(itm_arr[i]);}
