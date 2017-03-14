@@ -121,13 +121,15 @@ alert('tag2= '+tg22+' tag1= '+tag1+' tag4= '+ tag4+' tag3 ='+ tag3);
 //document.getElementById('tg2').value=tg22;	
 	//array1 = listToArray(tag2, ',');
 array1 = tg22.split(',');
+array1.push(tag1);
 //for(var i = 0; i < str_array.length; i++) {
 	for(var i = 0; i < array1.length; i++) {
    // Trim the excess whitespace.
  //  array1[i] = array1[i].replace(/^\s*/, "").replace(/\s*$/, "");
    // Add additional code here, such as:
    alert(array1[i]);
-}	
+}
+	
 //alert(array2[0]);	
 
 //var lat1=tag1.concat(str2);
