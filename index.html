@@ -336,12 +336,13 @@ else if(x=='sauce')
 function getList()
 	{
 		
-		alert(values1);
-		alert(values2);
-		alert(values3);
-		alert(values4);
-		alert(values5);
-		alert(values6);
+		//alert(values1);
+		//alert(values2);
+		//alert(values3);
+		//alert(values4);
+		//alert(values5);
+		//alert(values6);
+		var res1 = values1.concat(values2,values3,values4,values5,values6);
 		
 		if(!values1) { itm_arr=values1.split(',');
 			      itm_arr.push(values1);}
@@ -356,7 +357,7 @@ function getList()
 		if(!values6) { itm_arr=values6.split(',');
 			      itm_arr.push(values6);}
 		//var all_sel=values1.join()
-		
+		itm_arr=res1.split(',');
 		for(var i = 0; i < itm_arr.length; i++) {
 	 
  alert(itm_arr[i]);
