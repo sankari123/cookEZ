@@ -342,13 +342,20 @@ function getList()
 		alert(values4);
 		alert(values5);
 		alert(values6);
-		if(!values1) { itm_arr.push(values1);}
-		if(!values2) { itm_arr.push(values2);}
-		if(!values3) { itm_arr.push(values3);}
-		if(!values4) { itm_arr.push(values4);}
-		if(!values5) { itm_arr.push(values5);}
-		if(!values6) { itm_arr.push(values6);}
 		
+		if(!values1) { itm_arr=values1.split(',');
+			      itm_arr.push(values1);}
+		if(!values2) { itm_arr=values2.split(',');
+			      itm_arr.push(values2);}
+		if(!values3) {itm_arr=values3.split(',');
+			      itm_arr.push(values3);}
+		if(!values4) { itm_arr=values4.split(',');
+			      itm_arr.push(values4);}
+		if(!values5) {itm_arr=values5.split(',');
+			      itm_arr.push(values5);}
+		if(!values6) { itm_arr=values6.split(',');
+			      itm_arr.push(values6);}
+		//var all_sel=values1.join()
 		
 		for(var i = 0; i < itm_arr.length; i++) {
 	 
