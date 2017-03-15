@@ -330,39 +330,7 @@ else if(x=='sauce')
 	values5 = $('#season').val();
 	values6 = $('#sauce').val();
 	
-//var values = $('#dairy').val();
-	//alert(values);
-	//vall=vall+"  "+values;
-	
-////itm_arr.push(values);
-//	vall=values.join();
-	if(x=='dairy')
-	{
-	var values = $('#dairy').val();
-	itm_arr.push(values);
-	}
-	else if(x=='veg')
-	{
-	var values = $('#veg').val();
-	itm_arr.push(values);
-	}
-	else if(x=='meat')
-	{
-	var values = $('#meat').val();
-	itm_arr.push(values);
-	}
-	else if(x=='bread')
-	{
-	var values = $('#bread').val();
-	itm_arr.push(values);
-	}
-	else
-	{
-	var values = $('#sauce').val();
-	itm_arr.push(values);
-	}
-	
-//	alert(values);
+
 
 }
 function getList()
@@ -374,12 +342,12 @@ function getList()
 		alert(values4);
 		alert(values5);
 		alert(values6);
-		if( (!values1) { itm_arr.push(values1);}
-		if( (!values2) { itm_arr.push(values2);}
-		if( (!values3) { itm_arr.push(values3);}
-		if( (!values4) { itm_arr.push(values4);}
-		if( (!values5) { itm_arr.push(values5);}
-		if( (!values6) { itm_arr.push(values6);}
+		if(!values1) { itm_arr.push(values1);}
+		if(!values2) { itm_arr.push(values2);}
+		if(!values3) { itm_arr.push(values3);}
+		if(!values4) { itm_arr.push(values4);}
+		if(!values5) { itm_arr.push(values5);}
+		if(!values6) { itm_arr.push(values6);}
 		
 		
 		for(var i = 0; i < itm_arr.length; i++) {
