@@ -321,8 +321,10 @@ var vall;
 	
 	var values = $('#dairy').val();
 	//alert(values);
+	vall=vall+"  "+values;
+	
 	itm_arr.push(values);
-	vall=values.join();
+//	vall=values.join();
 	if(x=='dairy')
 	{
 	var values = $('#dairy').val();
@@ -354,7 +356,8 @@ var vall;
 }
 function getList()
 	{
-		alert('in  '+vall);
+		alert('in  ');
+		alert(vall);
 		
 		for(var i = 0; i < itm_arr.length; i++) {
 	 
