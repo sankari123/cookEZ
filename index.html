@@ -344,12 +344,12 @@ function getList()
 		//alert(values6);
 		//var res1 = values1.concat(values2,values3,values4,values5,values6);
 		
-		if (!!values1) {  res1 += values1; }
-		if (!!values2) {  res1+= values2;}
-		if (!!values3) {res1+= values3;}
-		if (!!values4) {res1+= values4;}
-		if (!!values5){res1+= values5;}
-		if (!!values6) {res1+= values6;}
+		if (values1 !== null) {  res1 += values1; }
+		if (values2 !== null) {  res1+= values2;}
+		if (values3 !== null) {res1+= values3;}
+		if (values4 !== null) {res1+= values4;}
+		if (values5 !== null){res1+= values5;}
+		if (values6 !== null) {res1+= values6;}
 		//var all_sel=values1.join()
 		res1+=values1+values2+values3+values4+values5+values6;
 		alert(res1);
@@ -483,13 +483,13 @@ pre {
 		<tr><td align='center' width='90%'>Meat</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
 		
 		<select data-role="select" style='width:400px;' multiple='multiple' name="meat" id="meat"  data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
-		<option>Mutton</option>
-		<option>Beef</option>
-		<option>Ham</option>
-		<option>Chicken</option>
-		<option>Egg</option>
-		<option>Fish</option>
-		<option>Steak</option>
+		<option  value='Mutton'>Mutton</option>
+		<option  value='Beef'>Beef</option>
+		<option  value='Ham'>Ham</option>
+		<option  value='Chicken'>Chicken</option>
+		<option  value='Egg'>Egg</option>
+		<option  value='Fish'>Fish</option>
+		<option  value='Steak'>Steak</option>
 		</select>
 		
 	</div>
@@ -501,14 +501,14 @@ pre {
 	
 	
 <select data-role="select" style='width:400px;' multiple='multiple' name="bread" id="bread"  data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
- <option>Baguette</option>
- <option>Bagel</option>
- <option>Tortilla</option>
- <option>Rye Bread</option>
- <option>Naan</option>
- <option>Croissant</option>
- <option>Flat Bread</option>
- <option>French Bread</option>
+ <option value='Baguette'>Baguette</option>
+ <option value='Bagel'>Bagel</option>
+ <option value='Tortilla'>Tortilla</option>
+ <option value='Rye Bread'>Rye Bread</option>
+ <option value='naan'>Naan</option>
+ <option value='Croissant'>Croissant</option>
+ <option value='Flat_Bread'>Flat Bread</option>
+ <option value='French_Bread'>French Bread</option>
 </select>
 </div>
 	
@@ -517,18 +517,18 @@ pre {
 <tr><td align='center' width='90%'>Seasoning</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
 		
 <select data-role="select" style='width:400px;' multiple='multiple' name="season" id="season"  data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
-<option>Anise</option>
-<option>Basil</option>
-<option>Black Pepper</option>
-<option>Peppercorn</option>
-<option>Caraway Seed</option>
-<option>Celery Flakes</option>
-<option>Celery Seed</option>
-<option>Chilli Powder</option>
-<option>Cilantro Leaves</option>
-<option>Cinnamon</option>
-<option>Cloves</option>
-<option>Cumin</option>
+<option value='Anise'>Anise</option>
+<option value='Basil'>Basil</option>
+<option value='Black_Pepper'>Black Pepper</option>
+<option value='Peppercorn'>Peppercorn</option>
+<option value='Caraway_Seed'>Caraway Seed</option>
+<option value='Celery_Flakes'>Celery Flakes</option>
+<option value='Celery_Seed'>Celery Seed</option>
+<option value='>Chilli_Powder'>Chilli Powder</option>
+<option value='Cilantro_Leaves'>Cilantro Leaves</option>
+<option value='Cinnamon'>Cinnamon</option>
+<option value='Cloves'>Cloves</option>
+<option value='Cumin'>Cumin</option>
 </select>
 </div>
 
@@ -537,11 +537,11 @@ pre {
 <tr><td align='center' width='90%'>Sauce</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
 			
 <select data-role="select" style='width:400px;' multiple='multiple' name="sauce" id="sauce"  data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
-<option>Pasta Sauce</option>
-<option>Chilly Sauce</option>
-<option>Green Sauce</option>
-<option>Butter Sauce</option>
-<option>White Sauce</option>
+<option value='Pasta'>Pasta Sauce</option>
+<option value='Chilly'>Chilly Sauce</option>
+<option value='Green'>Green Sauce</option>
+<option value='Butter'>Butter Sauce</option>
+<option value='White'>White Sauce</option>
 </select>
 		
 </div>
