@@ -344,19 +344,16 @@ function getList()
 		//alert(values6);
 		//var res1 = values1.concat(values2,values3,values4,values5,values6);
 		
-		if(!values1) {  res1 = values1; }
-		if(!values2) {  res1=res1.concat(values2);}
-		if(!values3) {res1=res1.concat(values3);}
-		if(!values4) { res1=res1.concat(values4);}
-		if(!values5) {res1=res1.concat(values5);}
-		if(!values6) { res1=res1.concat(values6);}
+		if(!values1) {  res1 += values1; }
+		if(!values2) {  res1+= values2;}
+		if(!values3) {res1+= values3;}
+		if(!values4) {res1+= values4;}
+		if(!values5){res1+= values5;}
+		if(!values6) {res1+= values6;}
 		//var all_sel=values1.join()
+		res1+=values1+values2+values3+values4+values5+values6;
 		alert(res1);
-		itm_arr=res1.split(',');
-		for(var i = 0; i < itm_arr.length; i++) {
-	 
- alert(itm_arr[i]);
-		}
+		
 	}
 function back_chk()
 	{
