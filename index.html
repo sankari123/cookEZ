@@ -314,7 +314,7 @@ else if(x=='sauce')
    }
 }
 	var itm_arr=new array();
-
+var vall;
 	function getData(x)
 {
 	//alert(x);
@@ -322,7 +322,7 @@ else if(x=='sauce')
 	var values = $('#dairy').val();
 	//alert(values);
 	itm_arr.push(values);
-	
+	vall=values.join();
 	if(x=='dairy')
 	{
 	var values = $('#dairy').val();
@@ -354,10 +354,11 @@ else if(x=='sauce')
 }
 function getList()
 	{
-		alert('in'+itm_arr.length);
+		alert('in  '+vall);
+		
 		for(var i = 0; i < itm_arr.length; i++) {
 	 
- alert(itm_arr[i]);}
+// alert(itm_arr[i]);}
 	}
 function back_chk()
 	{
