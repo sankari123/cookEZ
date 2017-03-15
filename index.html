@@ -319,11 +319,11 @@ var vall;
 {
 	//alert(x);
 	
-var values = $('#dairy').val();
+//var values = $('#dairy').val();
 	//alert(values);
 	//vall=vall+"  "+values;
 	
-itm_arr.push(values);
+////itm_arr.push(values);
 //	vall=values.join();
 	if(x=='dairy')
 	{
@@ -356,9 +356,19 @@ itm_arr.push(values);
 }
 function getList()
 	{
-		var values = $('#dairy').val();
-		alert(values);
-		itm_arr.push(values);
+		var values1 = $('#dairy').val();
+		var values2 = $('#veg').val();
+		var values3 = $('#meat').val();
+		var values4 = $('#bread').val();
+		var values5 = $('#season').val();
+		var values6 = $('#sauce').val();
+	//	alert(values);
+		itm_arr.push(values1);
+		itm_arr.push(values2);
+		itm_arr.push(values3);
+		itm_arr.push(values4);
+		itm_arr.push(values5);
+		itm_arr.push(values6);
 		for(var i = 0; i < itm_arr.length; i++) {
 	 
  alert(itm_arr[i]);
@@ -462,7 +472,7 @@ pre {
 			<option value='yogurt'>Yogurt</option>
 			<option value='paneer'>Paneer</option>
 			<option value='butter'>Butter</option>
-			<option value='butter'>Buttermilk</option>
+			<option value='buttermilk'>Buttermilk</option>
 		</select>
         </div>
 	
