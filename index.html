@@ -314,10 +314,21 @@ else if(x=='sauce')
    }
 }
 	var itm_arr=new array();
-var vall;
+	var values1;
+	var values2;
+	var values3;
+	var values4;
+	var values5;
+	var values6;
+
 	function getData(x)
 {
-	//alert(x);
+	values1 = $('#dairy').val();
+	values2 = $('#veg').val();
+	values3 = $('#meat').val();
+	values4 = $('#bread').val();
+	values5 = $('#season').val();
+	values6 = $('#sauce').val();
 	
 //var values = $('#dairy').val();
 	//alert(values);
@@ -356,12 +367,7 @@ var vall;
 }
 function getList()
 	{
-		var values1 = $('#dairy').val();
-		var values2 = $('#veg').val();
-		var values3 = $('#meat').val();
-		var values4 = $('#bread').val();
-		var values5 = $('#season').val();
-		var values6 = $('#sauce').val();
+		
 	//	alert(values);
 		itm_arr.push(values1);
 		itm_arr.push(values2);
