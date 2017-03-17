@@ -334,6 +334,7 @@ else if(x=='sauce')
 
 }
 	var res1;
+	var ret_arr = [];
 function getList()
 	{
 		res1='';
@@ -354,7 +355,14 @@ function getList()
 		//var all_sel=values1.join()
 		//res1=values1+values2+values3+values4+values5+values6;
 		alert(res1);
-		
+		ret_arr=res1.split(',');
+		var im_htm;
+		im_htm="<table border='0' class='ven' cellpadding='1' cellspacing='1'>";
+		im_htm+="<tr><td>Check Your List</td></tr>";
+		for (var i = 0, len = ret_arr.length; i < len; i++) {
+		im_htm+="<font size=2><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+ret_arr[i]+">"+ret_arr[i]+"</td></tr>";
+		}
+		im_htm+="</table>";
 	}
 function back_chk()
 	{
@@ -525,7 +533,7 @@ pre {
 <option value='Caraway_Seed'>Caraway Seed</option>
 <option value='Celery_Flakes'>Celery Flakes</option>
 <option value='Celery_Seed'>Celery Seed</option>
-<option value='>Chilli_Powder'>Chilli Powder</option>
+<option value='Chilli_Powder'>Chilli Powder</option>
 <option value='Cilantro_Leaves'>Cilantro Leaves</option>
 <option value='Cinnamon'>Cinnamon</option>
 <option value='Cloves'>Cloves</option>
@@ -546,7 +554,13 @@ pre {
 </select>
 		
 </div>
-<br>
+
+<div id='select_lst' class='sub_lst1'>
+
+	
+</div>
+
+	<br>
 	</body>
 </html>
 <!---<img src="geo_test.jpg" id="img1" width='50%' height='50%' />
