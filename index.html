@@ -359,12 +359,13 @@ function getList()
 		back_chk();
 		
 		ret_arr=res1.split(',');
-		alert(ret_arr.length);
+		arr1= remove_duplicates_safe(ret_arr);
+		alert(arr1.length);
 		var im_htm;
 		im_htm="<table border='0' cellpadding='1' cellspacing='1' align='center'>";
-		im_htm+="<tr><td><font size=3>Check Your List</font></td></tr>";
-		for (var i = 0, len = ret_arr.length; i < len; i++) {
-		im_htm+="<font size=3><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+ret_arr[i]+">"+ret_arr[i]+"</td></tr></font>";
+		im_htm+="<tr><td><font size=3><b>Check Your List</b></font></td></tr>";
+		for (var i = 0, len = arr1.length; i < len; i++) {
+		im_htm+="<font size=3><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+arr1[i]+">"+arr1[i]+"</td></tr></font>";
 		}
 		document.getElementById("main_scr").style.display = "none";
                 document.getElementById("main_scr").style.visibility="false";
@@ -374,6 +375,19 @@ function getList()
 		document.getElementById('select_lst').innerHTML=im_htm+"</table>" ;
 	
 	}
+	
+	function remove_duplicates_safe(arr) {
+    var seen = {};
+    var sel_arr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (!(arr[i] in seen)) {
+            sel_arr.push(arr[i]);
+            seen[arr[i]] = true;
+        }
+    }
+    return sel_arr;
+
+}	
 function back_chk()
 	{
 	   document.getElementById("main_scr").style.display = "block";
