@@ -338,12 +338,12 @@ else if(x=='sauce')
 function getList()
 	{
 		res1='';
-		alert(values1);
-		alert(values2);
-		alert(values3);
-		alert(values4);
-		alert(values5);
-		alert(values6);
+	//	alert(values1);
+		//alert(values2);
+	//	alert(values3);
+		//alert(values4);
+		//alert(values5);
+		//alert(values6);
 		//var res1 = values1.concat(values2,values3,values4,values5,values6);
 		
 		if (values1 != null) {  res1 += values1+',' ; }
@@ -354,7 +354,11 @@ function getList()
 	if (values6 != null) {res1+= values6;}
 		//var all_sel=values1.join()
 		//res1=values1+values2+values3+values4+values5+values6;
+		res1-res1.substring(0, res1.length - 1);
 		alert(res1);
+		back_chk();
+		document.getElementById("select_lst").style.display = "block";
+                document.getElementById("select_lst").style.visibility="true";
 		ret_arr=res1.split(',');
 		var im_htm;
 		im_htm="<table border='0' class='ven' cellpadding='1' cellspacing='1'>";
@@ -368,6 +372,7 @@ function back_chk()
 	{
 	   document.getElementById("main_scr").style.display = "block";
            document.getElementById("main_scr").style.visibility="true";
+	   
 	   document.getElementById("sub_lst1").style.display = "none";
            document.getElementById("sub_lst1").style.visibility="false";
 		
