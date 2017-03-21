@@ -367,7 +367,8 @@ function getList()
 		for (var i = 0, len = ret_arr.length; i < len; i++) {
 		im_htm+="<font size=2><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+ret_arr[i]+">"+ret_arr[i]+"</td></tr>";
 		}
-		im_htm+="</table>";
+		document.getElementById('select_lst').innerHTML=im_htm+"</table>" ;
+	
 	}
 function back_chk()
 	{
