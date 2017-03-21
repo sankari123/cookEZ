@@ -357,16 +357,20 @@ function getList()
 		res1=res1.slice(0, -1);
 		alert(res1);
 		back_chk();
-		document.getElementById("select_lst").style.display = "block";
-                document.getElementById("select_lst").style.visibility="true";
+		
 		ret_arr=res1.split(',');
 		alert(ret_arr.length);
 		var im_htm;
-		im_htm="<table border='0' cellpadding='1' cellspacing='1'>";
-		im_htm+="<tr><td>Check Your List</td></tr>";
+		im_htm="<table border='0' cellpadding='1' cellspacing='1' align='center'>";
+		im_htm+="<tr><td><font size=3>Check Your List</font></td></tr>";
 		for (var i = 0, len = ret_arr.length; i < len; i++) {
-		im_htm+="<font size=2><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+ret_arr[i]+">"+ret_arr[i]+"</td></tr>";
+		im_htm+="<font size=3><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+ret_arr[i]+">"+ret_arr[i]+"</td></tr></font>";
 		}
+		document.getElementById("main_scr").style.display = "none";
+                document.getElementById("main_scr").style.visibility="false";
+		document.getElementById("select_lst").style.display = "block";
+                document.getElementById("select_lst").style.visibility="true";
+		
 		document.getElementById('select_lst').innerHTML=im_htm+"</table>" ;
 	
 	}
