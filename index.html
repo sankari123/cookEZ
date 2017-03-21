@@ -360,8 +360,9 @@ function getList()
 		document.getElementById("select_lst").style.display = "block";
                 document.getElementById("select_lst").style.visibility="true";
 		ret_arr=res1.split(',');
+		alert(ret_arr.length);
 		var im_htm;
-		im_htm="<table border='0' class='ven' cellpadding='1' cellspacing='1'>";
+		im_htm="<table border='0' cellpadding='1' cellspacing='1'>";
 		im_htm+="<tr><td>Check Your List</td></tr>";
 		for (var i = 0, len = ret_arr.length; i < len; i++) {
 		im_htm+="<font size=2><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+ret_arr[i]+">"+ret_arr[i]+"</td></tr>";
