@@ -363,9 +363,9 @@ function getList()
 		alert(arr1.length);
 		var im_htm;
 		im_htm="<table border='0' cellpadding='1' cellspacing='1' align='center'>";
-		im_htm+="<tr><td><font size=3><b>Check Your List</b></font></td></tr>";
+		im_htm+="<tr><td align='left'><font size=4><b>Check Your List</b></font></td></tr>";
 		for (var i = 0, len = arr1.length; i < len; i++) {
-		im_htm+="<font size=3><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+arr1[i]+">"+arr1[i]+"</td></tr></font>";
+		im_htm+="<font size=4><tr valign='top'><td width='50%' bordercolor='black'><input type='checkbox' name='itm' value="+arr1[i]+">"+arr1[i]+"</td></tr></font>";
 		}
 		document.getElementById("main_scr").style.display = "none";
                 document.getElementById("main_scr").style.visibility="false";
