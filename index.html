@@ -481,14 +481,17 @@ text-align:center;
 		
 		<table border="0" bgcolor='ffffff' cellpadding="0" cellspacing="0">
 		<tr bordercolor='ffffff'><td align='center' width='90%'>Dairy</td><td align='right'><button onclick='back_chk();' class='btn2'>Back</button></td></tr></table>
-		<select data-role="select" style='width:400px;' multiple='multiple' name="dairy" id="dairy" data-theme="c" data-overlay-theme="d" data-native-menu="false" data-inset="true" onChange="getData(this.value);">
-			<option value='milk'>Milk</option>
-			<option value='cheese'>Cheese</option>
-			<option value='yogurt'>Yogurt</option>
-			<option value='paneer'>Paneer</option>
-			<option value='butter'>Butter</option>
-			<option value='buttermilk'>Buttermilk</option>
-		</select>
+		<form>
+    <fieldset data-role="controlgroup">
+        <legend>Vertical:</legend>
+        <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+        <label for="checkbox-v-2a">One</label>
+        <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+        <label for="checkbox-v-2b">Two</label>
+        <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+        <label for="checkbox-v-2c">Three</label>
+    </fieldset>
+</form>
         </div>
 	
 	
