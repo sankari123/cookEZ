@@ -21,7 +21,6 @@
   <preference name="auto-hide-splash-screen" value="true"/>
   <preference name="disable-cursor" value="false"/>
   <preference name="android-build-tool" value="gradle" /> 
-  <gap:plugin name="cordova-plugin-admobpro" source="npm" />
   <preference name="android-installLocation" value="auto"/>
   <preference name="AndroidPersistentFileLocation" value="Internal" />
   <preference name="iosPersistentFileLocation" value="Library" />
