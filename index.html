@@ -485,15 +485,20 @@ text-align:center;
 		
 		<table border="0" bgcolor='ffffff' cellpadding="0" cellspacing="0">
 		<tr bordercolor='ffffff'><td align='center' width='90%'>Dairy</td><td align='right'><button onclick='back_chk();' class='btn2'>Back</button></td></tr></table>
-<div class="ui-field-contain">
-    <label for="select-multiple-1">Custom multiple select:</label>
-    <select multiple="multiple" data-native-menu="false" name="select-multiple-1" id="select-multiple-1">
-        <option value="">Choices:</option>
-        <option value="small">One</option>
-        <option value="medium">Two</option>
-        <option value="large">Three</option>
-    </select>
+		
+		
+		
+		<div data-role="fieldcontain">
+	<label for="select-choice-1" class="select">Choose Dairy Items</label>
+	<select name="select-choice-1" id="select-choice-1" multiple="multiple">
+		<option value="standard">Standard: 7 day</option>
+		<option value="rush">Rush: 3 days</option>
+		<option value="express">Express: next day</option>
+		<option value="overnight">Overnight</option>
+	</select>
 </div>
+		
+
 		
         </div>
 	
