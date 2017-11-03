@@ -320,12 +320,12 @@ else if(x=='spices')
 
 	function getData(x)
 {
-	values1 = $('#dairy').val();
-	values2 = $('#veg').val();
-	values3 = $('#meat').val();
-	values4 = $('#bread').val();
-	values5 = $('#season').val();
-	values6 = $('#sauce').val();
+	values1 = $('#select-choice-1').val();
+	values2 = $('#select-choice-2').val();
+	values3 = $('#select-choice-3').val();
+	values4 = $('#select-choice-4').val();
+	values5 = $('#select-choice-5').val();
+	values6 = $('#sele6t-choice-6').val();
 	
 
 
@@ -478,7 +478,7 @@ text-align:center;
 	<tr   ><td width='50%' > <button onclick='cat1_list(this.value);' class='btn2' value='pulses'><img src='pulses.png' style="display:inline; width:90%; height:90%;"></button></td><td  > <button onclick='cat1_list(this.value);' class='btn2' value='bread'><img src='bread.png' style="display:inline; width:90%; height:90%;"></button></td></tr>
 	<tr   ><td width='50%'> <button onclick='cat1_list(this.value);' class='btn2' value='nuts'><img src='nuts.png' style="display:inline; width:90%; height:90%;"></button></td><td > <button onclick='cat1_list(this.value);' class='btn2' value='spices'><img src='spices.png' style="display:inline; width:90%; height:90%;"></button></td></tr>
 		
-	<tr bordercolor='ffffff'><td style="height:10%;" colspan=2 align='center'><font face=arial><b><button onclick='getList();'> Continue</button></b></font><button onclick='getData11();'> Display</button></td></tr>
+	
 	</table>
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
@@ -530,7 +530,7 @@ text-align:center;
 		
 		<div data-role="fieldcontain">
 	 
-	<select name="select-choice-1" id="select-choice-1" multiple="multiple" onChange="getData(this.value);">
+	<select name="select-choice-3" id="select-choice-3" multiple="multiple" onChange="getData(this.value);">
 		<option value='urad'>Urad </option>
 			<option value='mung'>Mung (Green Gram)</option>
 			<option value='thur'>Thur (Pigeon peas)</option>
@@ -550,7 +550,7 @@ text-align:center;
 		
 		<div data-role="fieldcontain">
 	 
-	<select name="select-choice-1" id="select-choice-1" multiple="multiple" onChange="getData(this.value);">
+	<select name="select-choice-4" id="select-choice-4" multiple="multiple" onChange="getData(this.value);">
 		<option value='atta'>Atta (Wheat Flour)</option>
  <option value='maida'>Maida</option>
  <option value='rava'>Rava</option>
@@ -571,7 +571,7 @@ text-align:center;
 		
 		<div data-role="fieldcontain">
 	 
-	<select name="select-choice-1" id="select-choice-1" multiple="multiple" onChange="getData(this.value);">
+	<select name="select-choice-5" id="select-choice-5" multiple="multiple" onChange="getData(this.value);">
 		<option value='cashew'>Cashew Nuts</option>
  <option value='badam'>Badam (Almond)</option>
  <option value='pista'>Pista</option>
@@ -591,7 +591,7 @@ text-align:center;
 		
 		<div data-role="fieldcontain">
 	 
-	<select name="select-choice-1" id="select-choice-1" multiple="multiple" onChange="getData(this.value);">
+	<select name="select-choice-6" id="select-choice-6" multiple="multiple" onChange="getData(this.value);">
 		<option value='Anise'>Anise</option>
 <option value='Basil'>Basil</option>
 <option value='Black_Pepper'>Black Pepper</option>
@@ -606,9 +606,9 @@ text-align:center;
 <option value='Cumin'>Cumin</option>
 	</select>
 </div></div>
-	
-	
-	
+<table>	
+	<tr bordercolor='ffffff'><td style="height:10%;" colspan=2 align='center'><font face=arial><b><button onclick='getList();'> Continue</button></b></font><button onclick='getData11();'> Display</button></td></tr>
+	</table>
 	
 	<div id='select_lst' class='sel_lst'>
 
