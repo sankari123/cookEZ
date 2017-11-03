@@ -175,7 +175,10 @@ alert('long'+lng1);
 function cat1_list(x)
 {
    document.getElementById("main_scr").style.display = "none";
-   document.getElementById("main_scr").style.visibility="false";	   
+   document.getElementById("main_scr").style.visibility="false";
+	
+    document.getElementById("chk_lst").style.display = "block";
+    document.getElementById("chk_lst").style.visibility="true";
    
 if(x=='dairy')
    {
@@ -457,6 +460,13 @@ pre {
 	{
 	display:none;
 	}
+	
+	.chk_lst
+	{
+	display:none;
+	}
+	
+	
  .ven
 {
 width: 100vw;
@@ -470,7 +480,7 @@ text-align:center;
 <body style="background-color: transparent;" onload='init();'> 
 	<div id='menu' class=ven>
 	<table bgcolor="#DAD4D3" width='100%' align='center' cellpadding='0' cellspacing='0' > 
-	<tr height='40px'><td align='center'><b>cookEZ</b></td></tr></table>
+		<tr height='40px'><td><button onclick='back_chk();' class='btn2'><img src='back.png'></button></td><td align='center'><b>cookEZ</b></td><td><button onclick='next();' class='btn2'><img src='fwd.png'></button></td></tr></table>
 	</div>
 	<div id='main_scr' class='main_scr'>
         <table border="0" height='100%' cellpadding="1" cellspacing="1">
@@ -482,10 +492,7 @@ text-align:center;
 	</table>
 	</div>
 	<div id='sub_lst1' class='sub_lst1' align='center'>
-		
-		<table border="0" bgcolor='ffffff' cellpadding="0" cellspacing="0">
-		<tr bordercolor='ffffff'><td align='center' width='90%'>Dairy</td><td align='right'><button onclick='back_chk();' class='btn2'>Back</button></td></tr></table>
-		
+		 
 		
 		
 		<div data-role="fieldcontain">
@@ -503,9 +510,7 @@ text-align:center;
 	
 	
 	 <div id='sub_lst2' class='sub_lst2' align='center'>
-		<table border="0" height="10%" width='100%' cellpadding="0" cellspacing="0">
-		<tr><td align='center' width='90%'>Vegetables</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
-		
+		 
 		<div data-role="fieldcontain">
 	 
 	<select name="select-choice-2" id="select-choice-2" multiple="multiple" onChange="getData(this.value);">
@@ -525,8 +530,7 @@ text-align:center;
 
 	
 <div id='sub_lst3' class='sub_lst3' align='center'>
-		<table border="0" height="10%" width='100%' cellpadding="0" cellspacing="0">
-		<tr><td align='center' width='90%'>Pulses</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
+		 
 		
 		<div data-role="fieldcontain">
 	 
@@ -545,9 +549,7 @@ text-align:center;
 </div></div>
 
 <div id='sub_lst4' class='sub_lst4' align='center'>
-		<table border="0" height="10%" width='100%' cellpadding="0" cellspacing="0">
-		<tr><td align='center' width='90%'>Bread/Flour</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
-		
+		 
 		<div data-role="fieldcontain">
 	 
 	<select name="select-choice-4" id="select-choice-4" multiple="multiple" onChange="getData(this.value);">
@@ -566,9 +568,7 @@ text-align:center;
 		
 	
 	<div id='sub_lst5' class='sub_lst5' align='center'>
-		<table border="0" height="10%" width='100%' cellpadding="0" cellspacing="0">
-		<tr><td align='center' width='90%'>Nuts</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
-		
+		 
 		<div data-role="fieldcontain">
 	 
 	<select name="select-choice-5" id="select-choice-5" multiple="multiple" onChange="getData(this.value);">
@@ -586,9 +586,7 @@ text-align:center;
 	
 	
 <div id='sub_lst6' class='sub_lst6' align='center'>
-		<table border="0" height="10%" width='100%' cellpadding="0" cellspacing="0">
-		<tr><td align='center' width='90%'>Nuts</td><td align='right' width='10%'><button onclick='back_chk();' class='btn1'>Back</button></td></tr></table>
-		
+		 
 		<div data-role="fieldcontain">
 	 
 	<select name="select-choice-6" id="select-choice-6" multiple="multiple" onChange="getData(this.value);">
@@ -606,9 +604,12 @@ text-align:center;
 <option value='Cumin'>Cumin</option>
 	</select>
 </div></div>
-<table>	
-	<tr bordercolor='ffffff'><td style="height:10%;" colspan=2 align='center'><font face=arial><b><button onclick='getList();'> Continue</button></b></font><button onclick='getData11();'> Display</button></td></tr>
-	</table>
+	
+	
+<table id='chk_lst' class='chk_lst'>	
+	<tr bordercolor='ffffff'><td style="height:10%;" colspan=2 align='center'><font face=arial><b><button onclick='getList();'> Check Selected Items</button></b></font></td></tr></table>
+	<!--	<button onclick='getData11();'> Display</button>-->
+	
 	
 	<div id='select_lst' class='sel_lst'>
 
