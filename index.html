@@ -183,8 +183,8 @@ function cat1_list(x)
     document.getElementById("menu_sec").style.display = "block";
     document.getElementById("menu_sec").style.visibility="true";
 
-    document.getElementById("menu").style.display = "block";
-    document.getElementById("menu").style.visibility="true";
+    document.getElementById("menu").style.display ="none";
+    document.getElementById("menu").style.visibility="false";
    
 if(x=='dairy')
    {
@@ -339,6 +339,29 @@ else if(x=='spices')
 
 
 }
+function displayLst()
+	{
+	if (values1 != null) {  res1 += values1+',' ; }
+		if (values2 != null) {  res1+= values2+',' ;}
+		if (values3 != null) {res1+= values3+',' ;}
+	if (values4 != null) {res1+= values4+',' ;}
+	if (values5 != null){res1+= values5+',';}
+	if (values6 != null) {res1+= values6;}
+		//var all_sel=values1.join()
+		//res1=values1+values2+values3+values4+values5+values6;
+		//res1=res1.slice(0, -1);
+		alert(res1);
+		//back_chk();
+		
+		ret_arr=res1.split(',');
+		arr1= remove_duplicates_safe(ret_arr);
+		alert(arr1.length);
+	for (i = 0; i < arr.length; i++)
+{ 
+   $('#mySelect').append( '<option value="'+i+'">'+arr[i]+'</option>' );
+}
+	}	
+	
 	var res1;
 	var ret_arr = [];
 function getList()
@@ -362,7 +385,7 @@ function getList()
 		//res1=values1+values2+values3+values4+values5+values6;
 		//res1=res1.slice(0, -1);
 		alert(res1);
-		back_chk();
+		//back_chk();
 		
 		ret_arr=res1.split(',');
 		arr1= remove_duplicates_safe(ret_arr);
@@ -495,7 +518,7 @@ text-align:center;
 	
 	<div id='menu_sec' class='ven_sec'>
 	<table bgcolor="#DAD4D3" width='100%' align='center' cellpadding='0' cellspacing='0' > 
-		<tr height='40px'><td><button onclick='back_chk();' class='btn2'><img src='back.png'></button></td><td align='center'><b>cookEZ</b></td><td><button onclick='next();' class='btn2'><img src='fwd.png'></button></td></tr></table>
+		<tr height='40px'><td><button onclick='back_chk();' class='btn2'><img src='back.png'></button></td><td align='center'><b>cookEZ</b></td><td><button onclick='displayLst();' class='btn2'><img src='fwd.png'></button></td></tr></table>
 	</div>
 	
 	<div id='main_scr' class='main_scr'>
@@ -625,13 +648,13 @@ text-align:center;
 	
 	
 <table id='chk_lst' class='chk_lst'>	
-	<tr bordercolor='ffffff'><td style="height:10%;" colspan=2 align='center'><font face=arial><b><button onclick='getList();'> Check Selected Items</button></b></font></td></tr></table>
+	<tr bordercolor='ffffff'><td style="height:10%;" colspan=2 align='center'><font face=arial><b><button onclick='displayLst();'> Check Selected Items</button></b></font></td></tr></table>
 	<!--	<button onclick='getData11();'> Display</button>-->
 	
 	
 	<div id='select_lst' class='sel_lst'>
 
-	
+	<select id='mySelect'></select>
 </div>
 
 	<br>
