@@ -341,6 +341,15 @@ else if(x=='spices')
 }
 function displayLst()
 	{
+		
+    document.getElementById("sel_lst").style.display = "block";
+    document.getElementById("sel_lst").style.visibility="true";
+
+    document.getElementById("main_scr").style.display ="none";
+    document.getElementById("main_scr").style.visibility="false";	
+		
+		
+		
 		res1='';
 	if (values1 != null) {  res1 += values1+',' ; }
 		if (values2 != null) {  res1+= values2+',' ;}
