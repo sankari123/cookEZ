@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>cookEZ</title>
+<title>cookEZ</title
 
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 
@@ -341,6 +341,7 @@ else if(x=='spices')
 }
 function displayLst()
 	{
+		res1='';
 	if (values1 != null) {  res1 += values1+',' ; }
 		if (values2 != null) {  res1+= values2+',' ;}
 		if (values3 != null) {res1+= values3+',' ;}
@@ -350,15 +351,16 @@ function displayLst()
 		//var all_sel=values1.join()
 		//res1=values1+values2+values3+values4+values5+values6;
 		//res1=res1.slice(0, -1);
-		alert(res1);
+		
 		//back_chk();
 		
 		ret_arr=res1.split(',');
 		arr1= remove_duplicates_safe(ret_arr);
+		alert(arr1);
 		alert(arr1.length);
-	for (i = 0; i < arr.length; i++)
+	for (i = 0; i < arr1.length; i++)
 { 
-   $('#mySelect').append( '<option value="'+i+'">'+arr[i]+'</option>' );
+   $('#mySelect').append( '<option value="'+i+'">'+arr1[i]+'</option>' );
 }
 	}	
 	
@@ -499,6 +501,10 @@ pre {
 	{
 	display:none;
 	}
+	.sel_lst
+	{
+	display:none;
+	}
 	
  .ven
 {
@@ -537,6 +543,7 @@ text-align:center;
 		<div data-role="fieldcontain">
 	 
 		 
+		  <label for="select-choice-1" class="select">Dairy Items</label>
 	<select name="select-choice-1" id="select-choice-1" multiple="multiple" onChange="getData(this.value);"> 
 		 
 		<option value="milk">Milk</option>
