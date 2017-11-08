@@ -305,8 +305,8 @@ function finalLst()
     if (this.readyState == 4) {
 	 //   alert(this.status);
       if(this.status == 200 || this.status == 0){
-   //   document.getElementById("responsecontainer").innerHTML = this.responseText;
-	   alert(this.responseText);
+      document.getElementById("responsecontainer").innerHTML = this.responseText;
+	 //  alert(this.responseText);
       }}};
   xhttp.open("POST", "http://www.writeacademy.in/cookEZ/fetchRecipe.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -683,6 +683,8 @@ text-align:center;
 </div>
 
 </div>	 
+	<div id='responsecontainer'>
+	</div>
 	</body>
 </html>
 <!---<img src="geo_test.jpg" id="img1" width='50%' height='50%' />
